@@ -1,0 +1,23 @@
+/*//RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+a,
+button,
+textarea {
+  font: inherit;
+}
+input {
+  letter-spacing: 1px;
+  padding: 0.2rem;
+}
+/*//RESET*/
