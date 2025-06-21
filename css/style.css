@@ -20,4 +20,373 @@ input {
   letter-spacing: 1px;
   padding: 0.2rem;
 }
-/*//RESET*/
+/*/
+/RESET*/
+/*GENERAL STYLES*/
+html {
+  /* background-color: rgb(235, 235, 235); */
+  background-color: white;
+  padding: 0.3rem;
+}
+/*GENERAL STYLES*/
+/*NAV-BAR*/
+.div-of-all-nav-elements {
+  width: 100%;
+}
+.main-nav {
+  position: sticky;
+}
+.middle-nav-elements {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.4rem;
+  justify-content: center;
+  list-style: none;
+  margin-top: -1.8rem;
+}
+.middle-nav-elements a {
+  text-decoration: none;
+  color: black;
+}
+.middle-nav-elements a:hover {
+  color: blueviolet;
+  transform: scale(1.1);
+  transition: all o.3s ease-in;
+}
+#home_link_on_nav {
+  color: blueviolet;
+  text-decoration: underline;
+}
+.debrah_kobby-on-nav {
+  margin-left: 1.5rem;
+  margin-top: 0.3rem;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 550;
+}
+.only_kobby_selected_span {
+  color: blueviolet;
+}
+.message-icon-on-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
+  margin-top: -1.4rem;
+  font-size: 1.3rem;
+}
+.message-icon-on-nav i {
+  color: blueviolet;
+}
+/*NAV-BAR*/
+/*FIRST PAGE*/
+#firstpage {
+  height: 70vh;
+}
+.firstpage_div_of_items {
+  display: grid;
+  /* grid-template-rows: 100px 100px 100px; */
+  grid-template-columns: 2fr 1fr 0.06fr;
+  grid-template-areas: "writing pic social";
+  align-items: center;
+  padding: 0.4rem;
+  margin-top: 10%;
+  margin-left: 1.4rem;
+  margin-right: 1.8rem;
+}
+.writing_area_on_first_page {
+  grid-area: writing;
+  white-space: wrap;
+}
+.picture_on_firstpage {
+  grid-area: pic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 380px;
+  height: 380px;
+}
+.social_on_first_page {
+  grid-area: social;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.social_on_first_page i {
+  color: gray;
+  font-size: 1.3rem;
+}
+.social_on_first_page i:hover {
+  color: blueviolet;
+}
+.hey_im_prince {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: -1rem;
+}
+.frontend_text_on_firstpage {
+  font-size: 5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 800;
+}
+.front_seperate-text-on_first-page {
+  color: blueviolet;
+}
+.developer_text_on_first_page {
+  font-size: 5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 800;
+  margin-top: -2rem;
+}
+.long_intro_text_on_first_page {
+  font-size: 1.5rem;
+  color: rgb(102, 102, 102);
+}
+.buttons_div_on_first_page {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.get_in_touch_button_on_first_page {
+  padding: 0.6rem;
+  width: 130px;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  border: none;
+}
+.get_in_touch_button_on_first_page:hover {
+  background-color: rgb(53, 53, 53);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.browse_projects_button_on_first_page {
+  padding: 0.6rem;
+  width: 130px;
+  border-radius: 4px;
+  background-color: rgb(197, 197, 197);
+  color: black;
+  font-weight: 600;
+  border: none;
+}
+
+.browse_projects_button_on_first_page:hover {
+  background-color: rgb(131, 131, 131);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+/*FIRST PAGE*/
+/*ABOUT PAGE*/
+#about_me {
+  padding: 0.4rem;
+  margin-left: 1.4rem;
+}
+.about_me_on_about_page {
+  font-size: 6rem;
+  font-weight: 900;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.dot_after_about_me_on_about_page {
+  color: blueviolet;
+  margin-left: -1rem;
+}
+.vertical_ruler_and_about_me_long_text {
+  display: flex;
+  gap: 1rem;
+}
+.vertical_ruler-in-about-me {
+  border: 4px solid blueviolet;
+  width: 1px;
+  height: 220px;
+  border-radius: 6px;
+}
+.about_me_paragraphs {
+  font-size: 1.2rem;
+  color: rgb(54, 54, 54);
+  white-space: wrap;
+}
+/*ABOUT PAGE*/
+
+/*MEDIA QUERIES*/
+
+/* Large Desktop (1025px and above) */
+@media screen and (min-width: 1025px) {
+  .firstpage_div_of_items {
+    grid-template-columns: 2fr 1fr 0.06fr;
+    grid-template-areas: "writing pic social";
+  }
+   #firstpage {
+    height: 70vh;
+  }
+}
+
+/* Small Desktop (769px to 1024px) */
+@media screen and (max-width: 1024px) {
+  .firstpage_div_of_items {
+    grid-template-columns: 1.5fr 1fr 0.08fr;
+    grid-template-areas: "writing pic social";
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .picture_on_firstpage {
+    width: 300px;
+    height: 300px;
+  }
+  .frontend_text_on_firstpage,
+  .developer_text_on_first_page {
+    font-size: 4rem;
+  }
+  .long_intro_text_on_first_page {
+    font-size: 1.3rem;
+  }
+  .middle-nav-elements {
+    gap: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet (481px to 768px) */
+@media screen and (max-width: 768px) {
+  .firstpage_div_of_items {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "pic"
+      "social"
+      "writing";
+    margin-top: 5%;
+    justify-items: center;
+    text-align: center;
+  }
+  .picture_on_firstpage {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 1.5rem;
+  }
+  .social_on_first_page {
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .writing_area_on_first_page {
+    margin-bottom: 1.5rem;
+  }
+  .frontend_text_on_firstpage,
+  .developer_text_on_first_page {
+    font-size: 3rem;
+  }
+  .developer_text_on_first_page {
+    margin-top: 2px;
+  }
+  .long_intro_text_on_first_page {
+    font-size: 1.2rem;
+  }
+  .buttons_div_on_first_page {
+    justify-content: center;
+  }
+  .middle-nav-elements {
+    gap: 1rem;
+    font-size: 1.1rem;
+  }
+  .debrah_kobby-on-nav {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+  }
+  .message-icon-on-nav {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+  }
+   #firstpage {
+    height: 60vh;
+  }
+  .about_me_on_about_page {
+    font-size: 5rem;
+  }
+  .vertical_ruler-in-about-me {
+    height: 320px;
+  }
+  #about_me {
+    margin-right: 0.5rem;
+  }
+}
+
+/* Mobile (up to 480px) */
+@media screen and (max-width: 480px) {
+  /* Adjust other elements */
+  .debrah_kobby-on-nav {
+    margin-right: auto;
+  }
+  .message-icon-on-nav {
+    margin-left: auto;
+    font-size: 1.5rem;
+  }
+  .middle-nav-elements {
+    margin-top: 0.3rem;
+    font-size: 1.5rem;
+  }
+  .firstpage_div_of_items {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "pic"
+      "social"
+      "writing";
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 3%;
+  }
+  .picture_on_firstpage {
+    width: 350px;
+    height: 350px;
+    margin-bottom: 1rem;
+  }
+  .social_on_first_page {
+    flex-direction: row;
+    gap: 1.6rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .social_on_first_page i {
+    font-size: 2rem;
+  }
+  .frontend_text_on_firstpage,
+  .developer_text_on_first_page {
+    font-size: 2.8rem;
+    margin-top: 0.4rem;
+  }
+  .developer_text_on_first_page {
+    margin-top: -0.6rem;
+  }
+  .long_intro_text_on_first_page {
+    font-size: 1.4rem;
+    margin-top: 0.3rem;
+  }
+  .hey_im_prince {
+    font-size: 1.4rem;
+  }
+  .buttons_div_on_first_page {
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .get_in_touch_button_on_first_page,
+  .browse_projects_button_on_first_page {
+    width: 100%;
+    max-width: 200px;
+  }
+  #firstpage {
+    height: 100vh;
+  }
+  .about_me_on_about_page {
+    font-size: 4rem;
+  }
+  .vertical_ruler-in-about-me {
+    height: 550px;
+  }
+  #about_me {
+    margin-right: 0.5rem;
+  }
+}
