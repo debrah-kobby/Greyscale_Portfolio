@@ -27,6 +27,7 @@ html {
   /* background-color: rgb(235, 235, 235); */
   background-color: white;
   padding: 0.3rem;
+  scroll-behavior: smooth;
 }
 /*GENERAL STYLES*/
 /*NAV-BAR*/
@@ -195,19 +196,163 @@ html {
 .vertical_ruler_and_about_me_long_text {
   display: flex;
   gap: 1rem;
+  align-items: stretch;
 }
 .vertical_ruler-in-about-me {
   border: 4px solid blueviolet;
   width: 1px;
   height: 220px;
+
   border-radius: 6px;
 }
 .about_me_paragraphs {
   font-size: 1.2rem;
   color: rgb(54, 54, 54);
   white-space: wrap;
+  flex: 1;
 }
 /*ABOUT PAGE*/
+/*SKILLS PAGE*/
+.overall_div_of_skills_page {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+.skills_heading_on_skills_page {
+  font-size: 6rem;
+  font-weight: 900;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.div_of_all_the_languages_on_skills-page {
+  display: flex;
+  column-gap: 5rem;
+  row-gap: 2rem;
+  flex-wrap: wrap;
+}
+.div_of_all_the_languages_on_skills-page i {
+  font-size: 3rem;
+}
+.language-name-on-skills-page {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+  display: flex;
+  align-items: center;
+}
+.div_of_html_percentage-on-skills-page {
+  background-color: blueviolet;
+  width: 140px;
+  height: 17px;
+  border-radius: 6px;
+  padding: 0.1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+.css-percentage-on-skills-page {
+  background-color: blueviolet;
+  width: 140px;
+  height: 17px;
+  border-radius: 6px;
+  padding: 0.1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+.javascript-percentage-on-skills-page {
+  background-color: blueviolet;
+  width: 130px;
+  height: 17px;
+  border-radius: 6px;
+  padding: 0.1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+.python-percentage-on-skills-pages {
+  background-color: blueviolet;
+  width: 110px;
+  height: 17px;
+  border-radius: 6px;
+  padding: 0.1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+.c-percentage-on-skills-page {
+  background-color: blueviolet;
+  width: 90px;
+  height: 17px;
+  border-radius: 6px;
+  padding: 0.1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+/*SKILLS PAGE*/
+/*PROJECTS PAGE*/
+.overall-diV-for-projects-page {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+.projects-page-heading {
+  font-size: 6rem;
+  font-weight: 900;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.novera-project-img-and-text-div {
+  display: flex;
+  /* border: 1px solid blueviolet; */
+  padding: 0.3rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.novera-hotel-text-on-right-side {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-top: 2rem;
+  padding: 0.1rem;
+}
+.novera-hotel-img-on-left {
+  width: 60%;
+  border: 2px solid black;
+}
+.novera-hotel-project-heading {
+  font-size: 2rem;
+  justify-self: center;
+  font-weight: 800;
+}
+.paragraph-under-novera-project-heading {
+  /* text-align: center; */
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 1.5;
+}
+.stack-in-novera {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 800;
+}
+.stack-in-novera i {
+  font-size: 3rem;
+}
+.stack-on-in-novera-project-container {
+  color: blueviolet;
+}
+/*PROJECTS PAGE*/
 
 /*MEDIA QUERIES*/
 
@@ -217,7 +362,7 @@ html {
     grid-template-columns: 2fr 1fr 0.06fr;
     grid-template-areas: "writing pic social";
   }
-   #firstpage {
+  #firstpage {
     height: 70vh;
   }
 }
@@ -299,7 +444,7 @@ html {
     margin-right: 1rem;
     font-size: 1.2rem;
   }
-   #firstpage {
+  #firstpage {
     height: 60vh;
   }
   .about_me_on_about_page {
@@ -310,6 +455,12 @@ html {
   }
   #about_me {
     margin-right: 0.5rem;
+  }
+  .novera-hotel-text-on-right-side {
+    width: 100%;
+  }
+  .novera-hotel-img-on-left {
+    width: 100%;
   }
 }
 
@@ -388,5 +539,29 @@ html {
   }
   #about_me {
     margin-right: 0.5rem;
+    margin-left: -0.3rem;
+  }
+  .novera-hotel-text-on-right-side {
+    width: 100%;
+  }
+  .novera-hotel-img-on-left {
+    width: 100%;
+  }
+
+  .overall-diV-for-projects-page {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  .overall_div_of_skills_page{
+    margin-left: -0.3rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1128px) {
+  .novera-hotel-text-on-right-side {
+    width: 100%;
+  }
+  .novera-hotel-img-on-left {
+    width: 100%;
   }
 }
