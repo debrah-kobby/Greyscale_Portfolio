@@ -28,6 +28,7 @@ html {
   background-color: white;
   padding: 0.3rem;
   scroll-behavior: smooth;
+  touch-action: pan-y;
 }
 /*GENERAL STYLES*/
 /*NAV-BAR*/
