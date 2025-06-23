@@ -308,6 +308,7 @@ html {
   padding: 0.4rem;
   margin-left: 2rem;
   margin-right: 1rem;
+  margin-bottom: 2rem;
 }
 .projects-page-heading {
   font-size: 6rem;
@@ -357,6 +358,39 @@ html {
   color: blueviolet;
 }
 /*PROJECTS PAGE*/
+/*FOOTER SECTION*/
+.footer-overall-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.my-socials-in-footer {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.links-div-in-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 3rem;
+  row-gap: 1rem;
+}
+.links-div-in-footer i {
+  font-size: 2rem;
+  color: rgb(59, 59, 59);
+  margin-top: 1rem;
+}
+.links-div-in-footer i:hover {
+  color: blueviolet;
+}
+.all-rights-reserved-text {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+/*FOOTER SECTION*/
 
 /*MEDIA QUERIES*/
 
