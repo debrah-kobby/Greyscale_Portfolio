@@ -539,7 +539,7 @@ html {
   }
   #about_me {
     margin-right: 0.5rem;
-    margin-left: -0.3rem;
+    margin-left: -0.1rem;
   }
   .novera-hotel-text-on-right-side {
     width: 100%;
@@ -549,11 +549,16 @@ html {
   }
 
   .overall-diV-for-projects-page {
-    margin-left: -0.5rem;
+    margin-left: -0.2rem;
     margin-right: -0.5rem;
   }
-  .overall_div_of_skills_page{
-    margin-left: -0.3rem;
+  .overall_div_of_skills_page {
+    margin-left: 1rem;
+  }
+  .about_me_on_about_page,
+  .skills_heading_on_skills_page,
+  .projects-page-heading {
+    font-size: 4rem;
   }
 }
 
