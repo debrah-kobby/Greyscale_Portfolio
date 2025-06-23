@@ -29,6 +29,9 @@ html {
   padding: 0.3rem;
   scroll-behavior: smooth;
   touch-action: pan-y;
+
+  overflow-x: hidden;
+  width: 100%;
 }
 /*GENERAL STYLES*/
 /*NAV-BAR*/
@@ -560,6 +563,16 @@ html {
   .skills_heading_on_skills_page,
   .projects-page-heading {
     font-size: 4rem;
+  }
+  .novera-hotel-project-heading {
+    text-decoration: underline;
+  }
+  .css-percentage-on-skills-page,
+  .javascript-percentage-on-skills-page,
+  .python-percentage-on-skills-pages,
+  .c-percentage-on-skills-page,
+  .div_of_html_percentage-on-skills-page {
+    font-size: 1rem;
   }
 }
 
