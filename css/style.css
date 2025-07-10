@@ -543,13 +543,13 @@ html {
     width: 100%;
   }
   .experience-page-heading-div p {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   #experience{
     margin-left: -0.2rem;
   }
   .experience_section-side-rule{
-    height: 52px;
+    height: 57px;
   }
 }
 
