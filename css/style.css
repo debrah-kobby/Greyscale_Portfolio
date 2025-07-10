@@ -542,6 +542,15 @@ html {
   .novera-hotel-img-on-left {
     width: 100%;
   }
+  .experience-page-heading-div p {
+    font-size: 4rem;
+  }
+  #experience{
+    margin-left: -0.2rem;
+  }
+  .experience_section-side-rule{
+    height: 52px;
+  }
 }
 
 /* Mobile (up to 480px) */
@@ -649,6 +658,9 @@ html {
   .c-percentage-on-skills-page,
   .div_of_html_percentage-on-skills-page {
     font-size: 1rem;
+  }
+  .experience-page-heading-div p {
+    font-size: 4rem;
   }
 }
 
