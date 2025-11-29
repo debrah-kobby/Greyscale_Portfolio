@@ -44,20 +44,10 @@ html {
 .middle-nav-elements {
   display: flex;
   gap: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   justify-content: center;
   list-style: none;
-  font-weight: bold;
-}
-.div-of-middle-nav-elements {
-  background-color: whitesmoke;
-  width: 400px;
-  margin: 0 auto;
   margin-top: -1.8rem;
-  padding: 0.3rem;
-  border-radius: 25px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  border: 1px solid rgb(223, 221, 221);
 }
 .middle-nav-elements a {
   text-decoration: none;
@@ -82,34 +72,20 @@ html {
 .only_kobby_selected_span {
   color: blueviolet;
 }
-.resume_downloader_on_nav {
+.message-icon-on-nav {
   display: flex;
   justify-content: flex-end;
   margin-right: 2rem;
   margin-top: -1.4rem;
-  gap: 1rem;
+  font-size: 1.3rem;
 }
-.downloadresumeonheader {
-  border: 1px solid rgb(197, 196, 196);
-  padding: 0.3rem;
-  border-radius: 7px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-
-  font-size: 0.9rem;
-}
-.downloadresumeonheader i {
+.message-icon-on-nav i {
   color: blueviolet;
-}
-
-.toggle_light-and-dark-mode {
-  display: flex;
-  align-items: center;
 }
 /*NAV-BAR*/
 /*FIRST PAGE*/
 #firstpage {
-  margin-top: 5rem;
-  height: 100vh;
+  height: 70vh;
 }
 .firstpage_div_of_items {
   display: grid;
@@ -118,7 +94,7 @@ html {
   grid-template-areas: "writing pic social";
   align-items: center;
   padding: 0.4rem;
-  margin-top: 7%;
+  margin-top: 10%;
   margin-left: 1.4rem;
   margin-right: 1.8rem;
 }
@@ -136,7 +112,6 @@ html {
   width: 380px;
   height: 380px;
 }
-
 .social_on_first_page {
   grid-area: social;
   display: flex;
@@ -151,83 +126,13 @@ html {
   color: blueviolet;
   transform: scale(1.1);
 }
-.hey_im {
+.hey_im_prince {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 4rem;
+  font-size: 1.2rem;
   margin-bottom: -1rem;
-  font-weight: bold;
-}
-.actualnameonfirstpage {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 4rem;
-  font-weight: 800;
-  /* background: linear-gradient(90deg, #a38ef7 0%, #421dfc 50%);
-  -webkit-background-clip: text;
-  color: transparent; */
-  color: blueviolet;
-}
-.secondactualnameonfirstpage {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 4rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #421dfc 0%, #ff00f2 40%);
-  -webkit-background-clip: text;
-  color: transparent;
-  margin-top: -0.5rem;
-}
-.bubbles-on-first-page {
-  display: flex;
-  gap: 1rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-.bubble-first-design {
-  color: white;
-  border-radius: 15px;
-  padding: 0.2rem;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-}
-.bubble-first-design i {
-  display: flex;
-  font-size: 0.9rem;
-  align-items: center;
-}
-.webdev_bubble {
-  display: flex;
-  width: 160px;
-  justify-content: center;
-  background-color: rgb(1, 93, 116);
-}
-.entrepreneur_bubble {
-  display: flex;
-  width: 160px;
-  justify-content: center;
-  background-color: rgb(255, 93, 93);
-}
-.ui_ux_bubble {
-  display: flex;
-  width: 160px;
-  justify-content: center;
-  background-color: rgb(146, 95, 0);
-}
-
-.videographer_bubble {
-  display: flex;
-  width: 160px;
-  justify-content: center;
-  background-color: rgb(2, 129, 2);
-}
-.textwritingstackonfirstpage {
-  font-size: 1.3rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin-bottom: 0.3rem;
-  background: linear-gradient(90deg, #1c00a8 0%, #94008d 10%);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: bold;
 }
 .frontend_text_on_firstpage {
-  font-size: 2rem;
+  font-size: 5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 800;
 }
@@ -241,9 +146,8 @@ html {
   margin-top: -2rem;
 }
 .long_intro_text_on_first_page {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: rgb(102, 102, 102);
-  display: flex;
 }
 .buttons_div_on_first_page {
   margin-top: 0.5rem;
@@ -251,10 +155,10 @@ html {
   gap: 1rem;
 }
 .get_in_touch_button_on_first_page {
-  padding: 0.8rem;
-  width: 140px;
+  padding: 0.6rem;
+  width: 130px;
   border-radius: 4px;
-  background-color: rgb(104, 6, 196);
+  background-color: black;
   color: white;
   font-weight: 600;
   border: none;
@@ -265,10 +169,10 @@ html {
   transition: all 0.3s ease-in;
 }
 .browse_projects_button_on_first_page {
-  padding: 0.8rem;
-  width: 190px;
+  padding: 0.6rem;
+  width: 130px;
   border-radius: 4px;
-  background-color: rgb(207, 207, 207);
+  background-color: rgb(197, 197, 197);
   color: black;
   font-weight: 600;
   border: none;
@@ -779,7 +683,7 @@ html {
     font-size: 1.4rem;
     margin-top: 0.3rem;
   }
-  .hey_im {
+  .hey_im_prince {
     font-size: 1.4rem;
   }
   .buttons_div_on_first_page {
