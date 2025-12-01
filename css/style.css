@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*//RESET*/
 * {
   margin: 0;
@@ -285,8 +286,56 @@ html {
   padding: 0.4rem;
   margin-left: 1.4rem;
 }
-.about_me_on_about_page,
-.skills_heading_on_skills_page,
+.aboutmepageheading {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  color: blueviolet;
+  display: flex;
+  justify-content: center;
+}
+.first_text_under_about {
+  display: flex;
+  justify-content: center;
+  color: rgb(82, 82, 82);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.left-and-right-div-in-in-about {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  grid-template-areas: "art abt";
+  margin-top: 3rem;
+}
+.left-image-in-about {
+  grid-area: "art";
+}
+.right-text-under-about {
+  grid-area: "abt";
+  margin-top: 1.5rem;
+}
+.rightside_onabout_heading {
+  font-weight: bold;
+  font-size: 1.7rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.actualrighttxt {
+  color: rgb(82, 82, 82);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.1rem;
+  width: 80%;
+}
+.dottedstuff {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.3rem;
+  margin-left: 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* .skills_heading_on_skills_page,
 .experience-page-heading-div,
 .projects-page-heading {
   font-size: 4rem;
@@ -296,8 +345,7 @@ html {
   display: flex;
   justify-content: center;
 }
-.about_me_on_about_page p::after,
-.about_me_on_about_page p::before,
+
 .skills_heading_on_skills_page p::after,
 .skills_heading_on_skills_page p::before,
 .experience-page-heading-div p::before,
@@ -310,14 +358,6 @@ html {
   height: 4px;
   background-color: blueviolet;
   top: 55%;
-}
-.about_me_on_about_page p::after {
-  transform: translateY(-50%);
-  right: 34%;
-}
-.about_me_on_about_page p::before {
-  transform: translateY(-50%);
-  left: 34%;
 }
 
 .vertical_ruler_and_about_me_long_text {
@@ -337,9 +377,90 @@ html {
   color: rgb(54, 54, 54);
   white-space: wrap;
   flex: 1;
-}
+} */
 /*ABOUT PAGE*/
 /*SKILLS PAGE*/
+.skillstab {
+  display: flex;
+  gap: 3rem;
+  background-color: rgb(224, 224, 224);
+  border-radius: 7px;
+  width: 65%;
+  padding: 0.3rem;
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  justify-content: center;
+}
+.webdev_tab_content {
+  display: flex;
+
+  background-color: white;
+  border: 2px solid blueviolet;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 7px;
+  padding: 2rem;
+  padding-top: 1rem;
+}
+.rightwebdevcontentstuff {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.eachwebdevstack {
+  background-color: rgb(214, 214, 214);
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  font-size: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  height: 25px;
+}
+.chevronbeofrewebdevtext {
+  background-color: rgb(214, 214, 214);
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.main-content-heading {
+  display: flex;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  align-items: center;
+}
+.main-content-heading p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.secondary-content-heading {
+  margin-top: 0.5rem;
+  color: rgb(59, 59, 59);
+  width: 90%;
+}
+.left_content_on_webdevcontent {
+  width: 50%;
+}
+.active_skill_tab {
+  background-color: white;
+
+  border-radius: 7px;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+.content-for-skills-tabs {
+  background-color: rgb(240, 240, 240);
+  margin-top: 1rem;
+  padding: 0.2rem;
+  height: 40vh;
+}
 .overall_div_of_skills_page {
   display: flex;
   flex-direction: column;
