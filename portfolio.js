@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+/* document.addEventListener("DOMContentLoaded", function () {
   function setupScrollAnimations() {
     const observerOptions = {
       threshold: 0.1,
@@ -77,3 +77,68 @@ styleSheet.textContent = `
 `;
 
 document.head.appendChild(styleSheet);
+ */
+
+const variableText = document.querySelector(".variabletext");
+const getInTouchButton = document.querySelector(
+  ".get_in_touch_button_on_first_page"
+);
+const getInTouchModal = document.querySelector(".getintouchmodalonfirstpage");
+const downloadResumeBtn = document.querySelectorAll(".downloadresume");
+const toastForResumeDownloaded = document.querySelector(
+  ".toastforresumedownloaded"
+);
+downloadResumeBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    setTimeout(() => {
+      toastForResumeDownloaded.style.display = "flex";
+    }, 4000);
+    setTimeout(() => {
+      toastForResumeDownloaded.style.display = "none";
+    }, 9000);
+  });
+});
+
+getInTouchButton.addEventListener("click", () => {
+  getInTouchModal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+  document.body.style.height = "90vh"; // ensure no vertical scroll
+});
+// Close modal when clicking outside the modal content
+getInTouchModal.addEventListener("click", (e) => {
+  if (e.target === getInTouchModal) {
+    // click was on overlay, not content
+    closeModal();
+  }
+});
+
+// Close modal when pressing Escape
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && getInTouchModal.style.display === "flex") {
+    closeModal();
+  }
+});
+
+// Helper function to close modal
+function closeModal() {
+  getInTouchModal.style.display = "none";
+  document.body.style.overflow = "auto";
+  document.body.style.height = "auto"; // restore scrolling
+}
+
+const variableTextLoad = () => {
+  setTimeout(() => {
+    variableText.textContent = "a Web Developer";
+  }, 0);
+  setTimeout(() => {
+    variableText.textContent = "a UI/UX Designer";
+  }, 6000);
+  setTimeout(() => {
+    variableText.textContent = "an Entrepreneur";
+  }, 12000);
+  setTimeout(() => {
+    variableText.textContent = "a Videographer";
+  }, 18000);
+};
+variableTextLoad();
+setInterval(variableTextLoad, 24000);
