@@ -88,6 +88,26 @@ const downloadResumeBtn = document.querySelectorAll(".downloadresume");
 const toastForResumeDownloaded = document.querySelector(
   ".toastforresumedownloaded"
 );
+const individualTabs = document.querySelectorAll(".individualtab");
+const individualTabContent = document.querySelectorAll(".individualtabcontent");
+
+individualTabs.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    console.log("Tab clicked ");
+    const contentTarget = btn.dataset.tab;
+
+    individualTabs.forEach((t) => {
+      t.classList.remove("active_skill_tab");
+    });
+    btn.classList.add("active_skill_tab");
+
+    individualTabContent.forEach((c) =>
+      c.classList.remove("active_tab_content")
+    );
+
+    document.getElementById(contentTarget).classList.add("active_tab_content");
+  });
+});
 downloadResumeBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     setTimeout(() => {

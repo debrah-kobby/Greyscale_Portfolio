@@ -425,8 +425,11 @@ html {
   font-size: 0.9rem;
   justify-content: center;
 }
+.individualtab {
+  cursor: pointer;
+}
 
-.webdev_tab_content {
+.individualtabcontent {
   display: flex;
   background-color: white;
   border: 2px solid blueviolet;
@@ -436,6 +439,10 @@ html {
   border-radius: 7px;
   padding: 2rem;
   padding-top: 1rem;
+  display: none;
+}
+.active_tab_content {
+  display: flex;
 }
 
 .rightwebdevcontentstuff {
@@ -455,6 +462,7 @@ html {
   font-size: 1rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   height: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .chevronbeofrewebdevtext {
@@ -465,6 +473,7 @@ html {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .main-content-heading {
@@ -493,12 +502,16 @@ html {
   border-radius: 7px;
   padding-left: 0.3rem;
   padding-right: 0.3rem;
+  color: blueviolet;
+  font-weight: bold;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .content-for-skills-tabs {
   background-color: rgb(240, 240, 240);
-  margin-top: 1rem;
-  padding: 0.2rem;
+  border-radius: 15px;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 .overall_div_of_skills_page {
@@ -769,4 +782,5 @@ html {
   font-size: 1.3rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
