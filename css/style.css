@@ -1423,4 +1423,29 @@ html {
   .servicebox {
     width: 240px;
   }
+  .about_me_on_about_page p::after {
+    right: 20%;
+  }
+  .about_me_on_about_page p::before {
+    left: 20%;
+  }
+  .skills_heading_on_skills_page p::before {
+    left: 30%;
+  }
+  .skills_heading_on_skills_page p::after {
+    right: 30%;
+  }
+
+  .experience-page-heading-div p::before {
+    left: 18%;
+  }
+  .projects-page-heading p::after {
+    right: 25%;
+  }
+  .projects-page-heading p::before {
+    left: 25%;
+  }
+  .pestkell-flex-start-project {
+    margin: 0 auto;
+  }
 }
