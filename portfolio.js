@@ -90,7 +90,21 @@ const toastForResumeDownloaded = document.querySelector(
 );
 const individualTabs = document.querySelectorAll(".individualtab");
 const individualTabContent = document.querySelectorAll(".individualtabcontent");
+const ellipsissmallScreen = document.querySelector(".elipseonsmallscreens");
 
+const ellipsisContent = document.querySelector(".elipsecontentonsmallscreens");
+
+ellipsissmallScreen.addEventListener("click", () => {
+  ellipsisContent.classList.toggle("active");
+});
+document.addEventListener("click", (e) => {
+  if (
+    !ellipsissmallScreen.contains(e.target) &&
+    !ellipsisContent.contains(e.target)
+  ) {
+    ellipsisContent.classList.remove("active");
+  }
+});
 individualTabs.forEach((btn) => {
   btn.addEventListener("click", () => {
     console.log("Tab clicked ");
@@ -162,3 +176,13 @@ const variableTextLoad = () => {
 };
 variableTextLoad();
 setInterval(variableTextLoad, 24000);
+
+// Add scroll effect to navbar
+window.addEventListener("scroll", function () {
+  const nav = document.querySelector(".main-nav");
+  if (window.scrollY > 50) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
