@@ -81,19 +81,71 @@ document.head.appendChild(styleSheet);
 
 const variableText = document.querySelector(".variabletext");
 const getInTouchButton = document.querySelector(
-  ".get_in_touch_button_on_first_page"
+  ".get_in_touch_button_on_first_page",
 );
 const getInTouchModal = document.querySelector(".getintouchmodalonfirstpage");
 const downloadResumeBtn = document.querySelectorAll(".downloadresume");
 const toastForResumeDownloaded = document.querySelector(
-  ".toastforresumedownloaded"
+  ".toastforresumedownloaded",
 );
 const individualTabs = document.querySelectorAll(".individualtab");
 const individualTabContent = document.querySelectorAll(".individualtabcontent");
 const ellipsissmallScreen = document.querySelector(".elipseonsmallscreens");
-
 const ellipsisContent = document.querySelector(".elipsecontentonsmallscreens");
 
+const firstPage = document.getElementById("firstpage");
+const aboutMePage = document.getElementById("about_me");
+const navBar = document.getElementById("mainnavnav");
+const navBarHeight = navBar.offsetHeight;
+const aboutMePageHeight = aboutMePage.offsetHeight;
+console.log(aboutMePageHeight);
+const firstSocialIcons = document.querySelector(".social_on_first_page");
+const secondSocialIcons = document.querySelector(".modsforsocilaicons");
+const homeonNav = document.querySelector(".home_on_nav");
+const aboutonNav = document.querySelector(".aboutme_on_nav");
+const projectonNav = document.querySelector(".projects_on_nav");
+const skillsonNav = document.querySelector(".skills_on_mid_nav");
+const skillsPage = document.getElementById("skills");
+const projectPage = document.getElementById("prrojectsection");
+window.addEventListener("scroll", () => {
+  const firstPageRect = firstPage.getBoundingClientRect();
+  /* console.log("firstPage bottom:", firstPageRect.bottom, "navH:", navBarHeight); */
+
+  if (firstPageRect.bottom <= 609.6875) {
+    firstSocialIcons.classList.add("hideDisplay");
+    secondSocialIcons.classList.add("showDisplay");
+  } else {
+    firstSocialIcons.classList.remove("hideDisplay");
+    secondSocialIcons.classList.remove("showDisplay");
+  }
+});
+
+window.addEventListener("scroll", () => {
+  const aboutMePageRect = aboutMePage.getBoundingClientRect();
+  const skillsPageRect = skillsPage.getBoundingClientRect();
+  const projectPageRect = projectPage.getBoundingClientRect();
+  const firstPageRect = firstPage.getBoundingClientRect();
+  console.log("Skills Page:", firstPageRect.top, "navH:", navBarHeight);
+  if (firstPageRect.top <= 0) {
+    aboutonNav.removeAttribute("id");
+    homeonNav.id = "home_link_on_nav";
+  }
+  if (aboutMePageRect.top <= 125.34375) {
+    homeonNav.removeAttribute("id");
+    aboutonNav.id = "home_link_on_nav";
+    skillsonNav.removeAttribute("id");
+  }
+  if (skillsPageRect.top <= 128.125) {
+    aboutonNav.removeAttribute("id");
+    skillsonNav.id = "home_link_on_nav";
+  }
+  if (projectPageRect.top <= 128.453125) {
+    skillsonNav.removeAttribute("id");
+    projectonNav.id = "home_link_on_nav";
+  } else {
+    projectonNav.removeAttribute("id");
+  }
+});
 ellipsissmallScreen.addEventListener("click", () => {
   ellipsisContent.classList.toggle("active");
 });
@@ -107,7 +159,7 @@ document.addEventListener("click", (e) => {
 });
 individualTabs.forEach((btn) => {
   btn.addEventListener("click", () => {
-    console.log("Tab clicked ");
+    console.log(`${btn} clicked`);
     const contentTarget = btn.dataset.tab;
 
     individualTabs.forEach((t) => {
@@ -116,7 +168,7 @@ individualTabs.forEach((btn) => {
     btn.classList.add("active_skill_tab");
 
     individualTabContent.forEach((c) =>
-      c.classList.remove("active_tab_content")
+      c.classList.remove("active_tab_content"),
     );
 
     document.getElementById(contentTarget).classList.add("active_tab_content");
@@ -178,11 +230,11 @@ variableTextLoad();
 setInterval(variableTextLoad, 24000);
 
 // Add scroll effect to navbar
-window.addEventListener("scroll", function () {
+/* window.addEventListener("scroll", function () {
   const nav = document.querySelector(".main-nav");
   if (window.scrollY > 50) {
     nav.classList.add("scrolled");
   } else {
     nav.classList.remove("scrolled");
   }
-});
+}); */

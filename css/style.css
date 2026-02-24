@@ -31,8 +31,29 @@ html {
   padding: 0.3rem;
   scroll-behavior: smooth;
   touch-action: pan-y;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   width: 100%;
+}
+.fixed {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  width: 100%;
+}
+.sticky {
+  position: sticky;
+  top: 50px;
+}
+.hideDisplay {
+  opacity: 0 !important;
+  display: flex !important; /* keep it in layout, just invisible */
+  pointer-events: none;
+}
+
+.showDisplay {
+  opacity: 1 !important;
+  pointer-events: all;
+  display: flex !important;
 }
 
 /* NAV-BAR */
@@ -127,7 +148,9 @@ html {
 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .downloadresumeonheader:hover {
@@ -242,13 +265,40 @@ html {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  transition: display 0.3s ease-in-out;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.social_on_first_page_last {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: display 0.3s ease-in-out;
 }
 
-.social_on_first_page i {
+.social_on_first_page i,
+.social_on_first_page_last i {
   color: gray;
   font-size: 1.5rem;
 }
-
+.social_on_first_page_last i {
+  color: white;
+}
+.social_on_first_page_last i:hover {
+  color: rgb(199, 199, 199);
+  transform: scale(1.1);
+}
+.modsforsocilaicons {
+  position: fixed;
+  top: 11%;
+  right: 1%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  background-color: blueviolet;
+  padding: 0.5rem;
+  border-radius: 17px;
+}
 .social_on_first_page i:hover {
   color: blueviolet;
   transform: scale(1.1);
@@ -439,6 +489,7 @@ html {
 }
 .individualtab {
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .individualtabcontent {
@@ -452,9 +503,11 @@ html {
   padding: 2rem;
   padding-top: 1rem;
   display: none;
+  transition: all 0.3s ease-in-out;
 }
 .active_tab_content {
   display: flex;
+  transition: all 0.3s ease-in-out;
 }
 
 .rightwebdevcontentstuff {
@@ -475,6 +528,11 @@ html {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   height: 25px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .chevronbeofrewebdevtext {
@@ -486,6 +544,11 @@ html {
   align-items: center;
   border-radius: 50%;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.39);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .main-content-heading {
@@ -507,6 +570,7 @@ html {
 
 .left_content_on_webdevcontent {
   width: 50%;
+  transition: all 0.3s ease-in-out;
 }
 
 .active_skill_tab {
@@ -517,6 +581,7 @@ html {
   color: blueviolet;
   font-weight: bold;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
 }
 
 .content-for-skills-tabs {
@@ -645,7 +710,10 @@ html {
   flex-direction: column;
   gap: 0.6rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 }
 
 .servicebox:hover {
@@ -756,6 +824,24 @@ html {
   border-radius: 10px;
 }
 
+.overall_div_for_full_project_card_display {
+  width: 550px;
+  height: auto;
+  background-color: red;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.laptop_and_mobile_view_for_projects_div,
+.category_and_stack_div_on_FPCD,
+.youtube_and_live_icons_on_FPCD {
+  display: flex;
+}
+.laptop_and_mobile_view_for_projects_div {
+  gap: 1rem;
+}
 /* FOOTER SECTION */
 .footer-overall-div {
   display: flex;
@@ -880,7 +966,9 @@ html {
     gap: 0.8rem;
     font-size: 0.85rem;
   }
-
+  .middle-nav-elements a {
+    transition: all 0.3s ease-in-out;
+  }
   .div-of-middle-nav-elements {
     width: auto;
     padding: 0.3rem 0.8rem;
@@ -1187,8 +1275,8 @@ html {
     z-index: 100;
     font-size: 1rem;
     font-weight: bold;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
+    font-family:
+      "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     display: none;
   }
 
