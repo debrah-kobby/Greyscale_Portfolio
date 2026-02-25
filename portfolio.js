@@ -125,7 +125,7 @@ window.addEventListener("scroll", () => {
   const skillsPageRect = skillsPage.getBoundingClientRect();
   const projectPageRect = projectPage.getBoundingClientRect();
   const firstPageRect = firstPage.getBoundingClientRect();
-  console.log("Skills Page:", firstPageRect.top, "navH:", navBarHeight);
+  /* console.log("Skills Page:", firstPageRect.top, "navH:", navBarHeight); */
   if (firstPageRect.top <= 0) {
     aboutonNav.removeAttribute("id");
     homeonNav.id = "home_link_on_nav";
@@ -238,3 +238,91 @@ setInterval(variableTextLoad, 24000);
     nav.classList.remove("scrolled");
   }
 }); */
+
+const projectcardsNodelist = document.querySelectorAll(
+  ".individualprojectcards",
+);
+projectcardsNodelist.forEach((project) => {
+  /*  console.log(project.dataset); */
+  const projectDataset = project.dataset;
+  /* console.log(projectDataset.logo); */
+  project.addEventListener("click", () => {
+    console.log("Project Card Clicked");
+    const fullProjectCardDisplay = document.createElement("div");
+    fullProjectCardDisplay.classList.add(
+      "overall_div_for_full_project_card_display",
+    );
+    const projectStack = projectDataset.stack;
+
+    const projectStackParsed = JSON.parse(projectStack);
+
+    fullProjectCardDisplay.innerHTML = `
+    <div class="logo_of_project">
+        <img src="${projectDataset.logo}" alt="" />
+      </div>
+      <div class="laptop_and_mobile_view_for_projects_div">
+        <div class="latop_view_for_full_project_card_display">
+          <div class="pc_view_text_on_FPCD"><p>PC view</p></div>
+          <div class="pc_image_on_FPCD">
+            <img
+              src="${projectDataset.pcview}"
+              alt=""
+              width="350"
+              height="350"
+              class="mainindividualprojectimage"
+            />
+          </div>
+        </div>
+        <div class="mobile_view_for_ful_project_card_display">
+          <div class="mobile_view_text_on_FCPD"><p>Mobile view</p></div>
+          <div class="mobile_image_on_FPCD">
+            <img src="${projectDataset.mobileview}" alt="" width="70" height="70" />
+          </div>
+        </div>
+      </div>
+      <div class="category_and_stack_div_on_FPCD">
+        <div class="category_on_FPCD">${projectDataset.projectcategory}</div>
+        <div class="stack_on_FPCD"></div>
+      </div>
+      <div class="name_and_tagline_on_FPCD">
+        <div class="name_on_FPCD">${projectDataset.projectname}</div>
+        <div class="tagline_on_FPCD">${projectDataset.projecttagline}</div>
+      </div>
+      <div class="short_description_on_FPCD">${projectDataset.projectdescription}</div>
+      <div class="youtube_and_live_icons_on_FPCD">
+
+    <a href="${projectDataset.projectyoutubelink}" target="_blank" class="youtube_on_FPCD">
+      <i class="fa-brands fa-youtube"></i>
+      <p>View Demo</p>
+    </a>
+
+    <a href="${projectDataset.projectlivelink}" target="_blank" class="live_on_FPCD">
+      <i class="fa-solid fa-globe"></i>
+      <p>View Live</p>
+    </a>
+
+  </div>
+    `;
+
+    document.body.appendChild(fullProjectCardDisplay);
+    fullProjectCardDisplay.style.display = "flex";
+    stackContainer = fullProjectCardDisplay.querySelector(".stack_on_FPCD");
+
+    const stackMap = {
+      html: "html5-plain-wordmark",
+      css: "css3-plain-wordmark",
+      js: "javascript-plain",
+      git: "git-plain-wordmark",
+      github: "github-original",
+    };
+
+    stackContainer.innerHTML = projectStackParsed
+      .map(
+        (tech) =>
+          `<i class="devicon-${stackMap[tech]} colored"></i>
+    `,
+      )
+      .join(" ");
+    document.body.style.overflow = "hidden";
+  });
+});

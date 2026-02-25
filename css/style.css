@@ -838,11 +838,19 @@ html {
   font-family: "Poppins", sans-serif;
   padding: 0.4rem;
   border-radius: 12px;
+  position: fixed;
+  top: 10%;
+  left: 27%;
+  display: none;
 }
 .laptop_and_mobile_view_for_projects_div,
 .category_and_stack_div_on_FPCD,
 .youtube_and_live_icons_on_FPCD {
   display: flex;
+}
+.youtube_and_live_icons_on_FPCD a {
+  text-decoration: none;
+  color: black;
 }
 .youtube_and_live_icons_on_FPCD i {
   display: flex;
