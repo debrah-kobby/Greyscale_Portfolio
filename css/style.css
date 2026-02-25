@@ -968,6 +968,203 @@ html {
   font-family: "Exo 2", sans-serif;
 }
 
+/*RECENT POSTS AND NEwSLETTERS*/
+.overall_div_for_recent_post_and_newsletters {
+  display: flex;
+
+  padding: 2rem;
+  margin-left: 3rem;
+  margin-right: 2rem;
+
+  margin-top: 4rem;
+}
+.recent_posts_div {
+  width: 750px;
+}
+.heading_for_recent_posts {
+  font-family: "Exo 2", sans-serif;
+  font-size: 2.5rem;
+}
+.actual_recent_posts_cards_div {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.date_read_time_category_on_RP {
+  font-family: "Exo 2", sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 0.7rem;
+}
+
+.category_on_RP {
+  padding: 0.2rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+
+  background-color: rgb(185, 185, 185);
+  border-radius: 12px;
+}
+.category_on_RP i {
+  font-size: 0.7rem;
+  margin-right: 0.1rem;
+}
+.heading_on_RP {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  width: 60%;
+  margin-bottom: 0.5rem;
+}
+.short_text_on_RP {
+  font-family: "Exo 2", sans-serif;
+  width: 70%;
+  color: rgb(97, 97, 97);
+}
+.see_n_the_social_on_RP {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: -0.4rem;
+}
+.see_n_the_social_on_RP p {
+  font-family: "Exo 2", sans-serif;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+}
+
+.icon_for_social_on_RP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.2rem;
+}
+.icon_for_social_on_RP a {
+  text-decoration: none;
+}
+.icon_for_social_on_RP I {
+  font-size: 3rem;
+}
+.view_all_on_RP {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 270px;
+  display: flex;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: 7px;
+  font-family: "Exo 2", sans-serif;
+
+  border: 1px solid rgba(255, 255, 255, 0.2); /* glass edge */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* depth */
+}
+.view_all_on_RP:hover {
+  cursor: pointer;
+}
+.newsleter_and_lets_talk_div {
+  /* background-color: green; */
+}
+
+.lets_talk_div {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 7px;
+  padding: 0.2rem;
+}
+.newsletter_div {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 7px;
+  padding: 0.2rem;
+  margin-top: 1rem;
+  gap: 1.3rem;
+}
+.headingon_NL {
+  font-family: "Exo 2", sans-serif;
+  font-size: 0.9rem;
+  margin: 0 auto;
+}
+.headingon_NL i {
+  font-weight: bold;
+}
+.short_text_on_NL,
+.last_text_NL {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.email_field_on_newsletter {
+  position: relative;
+}
+.email_field_on_newsletter input {
+  border: 1px solid gray;
+  padding: 0.6rem;
+  border-radius: 7px;
+  font-family: "Exo 2", sans-serif;
+  font-size: 0, 9rem;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.email_field_on_newsletter input::placeholder{
+  font-size: 0.8rem;
+}
+.subscribe_buttn_on_NL {
+  border: 1px solid gray;
+  padding: 0.4rem;
+  border-radius: 7px;
+  position: absolute;
+  top: 9%;
+  left: 70%;
+  background-color: rgb(168, 168, 168);
+  font-family: "Exo 2", sans-serif;
+  font-size: 0.9rem;
+}
+.bulb_on_LT {
+  width: 100px;
+  margin: 0 auto;
+}
+.text_on_LT {
+  margin: 0 auto;
+}
+.lets_talk_button_on_LT {
+  margin: 0 auto;
+}
+
+.first-text-in_LT {
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.3rem;
+  width: 90%;
+  text-align: center;
+}
+.second-text-in_LT {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 0.3rem;
+}
+.lets_talk_button_on_LT {
+  border: 1px solid gray;
+  padding: 0.7rem;
+  display: flex;
+  gap: 0.2rem;
+  font-family: "Exo 2", sans-serif;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  margin-top: 0.3rem;
+}
+.lets_talk_button_on_LT:hover {
+  cursor: pointer;
+}
 /* COMPREHENSIVE RESPONSIVE MEDIA QUERIES */
 
 /* Large Tablets and Small Laptops (1024px and below) */
