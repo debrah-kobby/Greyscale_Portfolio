@@ -825,12 +825,24 @@ html {
 .mainindividualprojectimage {
   border-radius: 10px;
 }
+.project_card_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .overall_div_for_full_project_card_display {
+  /* remove position: fixed, top, left — the overlay handles centering now */
   width: 580px;
   height: auto;
   background-color: #d5cddd;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -838,11 +850,10 @@ html {
   font-family: "Poppins", sans-serif;
   padding: 0.4rem;
   border-radius: 12px;
-  position: fixed;
-  top: 10%;
-  left: 27%;
-  display: none;
+  z-index: 1000;
+  position: relative; /* changed from fixed */
 }
+
 .laptop_and_mobile_view_for_projects_div,
 .category_and_stack_div_on_FPCD,
 .youtube_and_live_icons_on_FPCD {
@@ -912,6 +923,10 @@ html {
 .stack_on_FPCD i {
   font-size: 2.5rem;
 }
+.logo_of_project img {
+  width: 115px;
+  height: 59px;
+}
 /* FOOTER SECTION */
 .footer-overall-div {
   display: flex;
@@ -947,7 +962,7 @@ html {
 }
 
 .all-rights-reserved-text {
-  font-size: 1.3rem;
+  font-size: 0.8rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-family: "Exo 2", sans-serif;

@@ -247,6 +247,9 @@ projectcardsNodelist.forEach((project) => {
   const projectDataset = project.dataset;
   /* console.log(projectDataset.logo); */
   project.addEventListener("click", () => {
+    const FPCDoverlay = document.createElement("div");
+    FPCDoverlay.classList.add("project_card_overlay");
+
     console.log("Project Card Clicked");
     const fullProjectCardDisplay = document.createElement("div");
     fullProjectCardDisplay.classList.add(
@@ -303,9 +306,26 @@ projectcardsNodelist.forEach((project) => {
 
   </div>
     `;
+    FPCDoverlay.appendChild(fullProjectCardDisplay);
+    document.body.appendChild(FPCDoverlay);
+    document.body.style.overflow = "hidden";
 
-    document.body.appendChild(fullProjectCardDisplay);
-    fullProjectCardDisplay.style.display = "flex";
+    // Close when clicking the dark overlay (outside the card)
+    FPCDoverlay.addEventListener("click", (e) => {
+      if (e.target === FPCDoverlay) {
+        FPCDoverlay.remove();
+        document.body.style.overflow = "auto";
+      }
+    });
+
+    // Close on Escape
+    document.addEventListener("keydown", function closeOnEsc(e) {
+      if (e.key === "Escape") {
+        FPCDoverlay.remove();
+        document.body.style.overflow = "auto";
+        document.removeEventListener("keydown", closeOnEsc);
+      }
+    });
     stackContainer = fullProjectCardDisplay.querySelector(".stack_on_FPCD");
 
     const stackMap = {
@@ -314,6 +334,11 @@ projectcardsNodelist.forEach((project) => {
       js: "javascript-plain",
       git: "git-plain-wordmark",
       github: "github-original",
+      boot: "bootstrap-plain",
+      figma: "figma-plain",
+      trello: "trello-plain",
+      canva: "canva-original",
+      notion: "notion-plain",
     };
 
     stackContainer.innerHTML = projectStackParsed
