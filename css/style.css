@@ -1115,7 +1115,7 @@ html {
   display: flex;
   justify-content: center;
 }
-.email_field_on_newsletter input::placeholder{
+.email_field_on_newsletter input::placeholder {
   font-size: 0.8rem;
 }
 .subscribe_buttn_on_NL {
@@ -1818,4 +1818,7 @@ html {
   .pestkell-flex-start-project {
     margin: 0 auto;
   }
+}
+:root {
+  color-scheme: light only;
 }
