@@ -3,6 +3,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap");
 /* RESET */
+:root {
+  color-scheme: light;
+  forced-color-adjust: none;
+}
+
+/* Optional: prevent dark mode overrides in Safari iOS */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -2176,8 +2187,4 @@ html {
   .email_field_on_newsletter input::placeholder {
     font-size: 16px;
   }
-}
-
-:root {
-  color-scheme: light only;
 }
