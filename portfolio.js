@@ -343,18 +343,36 @@ emailjs.init({
 });
 
 const form = document.querySelector(".newsletter_form");
+const subscribeButton = document.querySelector(".subscribe_buttn_on_NL");
+const emailInput = document.querySelector(".newsletter_email");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  const emailInputValue = emailInput.value.trim().toLowerCase();
+  const subscribedUsers =
+    JSON.parse(localStorage.getItem("subscribedUsers")) || [];
+
+  if (subscribedUsers.includes(emailInputValue)) {
+    alert("Already Subscribed");
+    return;
+  }
 
   emailjs.sendForm("service_2vc5rzk", "template_arca4cm", this).then(
     function (response) {
-      console.log("SUCCESS!", response.status, response.text);
-      alert("Subscribed successfully!");
-      form.reset();
+      if (response.status === 200) {
+        alert("Subscribed successfully!");
+
+        subscribedUsers.push(emailInputValue);
+        localStorage.setItem(
+          "subscribedUsers",
+          JSON.stringify(subscribedUsers),
+        );
+        form.reset();
+        // Disable further interaction
+      }
     },
     function (error) {
-      console.error("FAILED...", error);
+      console.log("FAILED...", error);
     },
   );
 });
