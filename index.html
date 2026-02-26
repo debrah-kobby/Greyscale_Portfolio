@@ -820,56 +820,7 @@
           <div class="recent_posts_div">
             <div class="heading_for_recent_posts"><h3>Recent Posts</h3></div>
             <div class="actual_recent_posts_cards_div">
-              <div class="individual_recent_posts_cards">
-                <div class="date_read_time_category_on_RP">
-                  Jan 2 - 2 min read -
-                  <span class="category_on_RP"
-                    ><i class="fa-solid fa-paintbrush"></i>Design</span
-                  >
-                </div>
-                <div class="heading_on_RP">
-                  <h4>What happens when a non tech savvy gets into Tech</h4>
-                </div>
-                <div class="short_text_on_RP">
-                  I didn’t enter the tech space because it was trendy or because
-                  I had everything figured out. I wasn’t “computer-savvy” in the
-                  way people often imagine. I started with curiosity and a lot
-                  of uncertainty........
-                </div>
-                <div class="see_n_the_social_on_RP">
-                  <p>View on</p>
-                  <div class="icon_for_social_on_RP">
-                    <a href="">
-                      <i class="devicon-linkedin-plain-wordmark colored"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="individual_recent_posts_cards">
-                <div class="date_read_time_category_on_RP">
-                  Feb 7 - 10 min read -
-                  <span class="category_on_RP"
-                    ><i class="fa-solid fa-paintbrush"></i>Build</span
-                  >
-                </div>
-                <div class="heading_on_RP">
-                  <h4>The “One-Line” Breakthrough: Building Luna Commerce</h4>
-                </div>
-                <div class="short_text_on_RP">
-                  I set a challenge for myself: build a high-level custom
-                  project for every major industry. I started with E-commerce,
-                  and that became Luna Commerce. Before writing a single line of
-                  code, I spent days wireframing, redesigning, and ......
-                </div>
-                <div class="see_n_the_social_on_RP">
-                  <p>View on</p>
-                  <div class="icon_for_social_on_RP">
-                    <a href="">
-                      <i class="devicon-linkedin-plain-wordmark colored"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <div class="individual_recent_posts_cards"></div>
             </div>
             <div class="view_all_on_RP">View All Posts</div>
           </div>
@@ -900,8 +851,18 @@
                 Get important news and articles delivered directly into ur inbox
               </div>
               <div class="email_field_on_newsletter">
-                <input type="email" placeholder="Email Address" />
-                <button class="subscribe_buttn_on_NL">Subscribe</button>
+                <form action="" class="newsletter_form">
+                  <input
+                    type="email"
+                    name="user_email"
+                    placeholder="Email Address"
+                    class="newsletter_email"
+                    required
+                  />
+                  <button class="subscribe_buttn_on_NL" type="submit">
+                    Subscribe
+                  </button>
+                </form>
               </div>
               <div class="last_text_NL">
                 You unsubscribe anytime by using the link in your inbox
@@ -1042,6 +1003,10 @@
         </div>
       </div>
     </div> -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script src="portfolio.js"></script>
   </body>
 </html>

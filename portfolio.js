@@ -351,3 +351,94 @@ projectcardsNodelist.forEach((project) => {
     document.body.style.overflow = "hidden";
   });
 });
+
+const recentPosts = [
+  {
+    date: "Jan 2",
+    readTime: "2 min",
+    category: " Design",
+    heading: "What happens when a non tech savvy gets into Tech",
+    content: `I didn’t enter the tech space because it was trendy or because I had everything figured out. I wasn’t “computer-savvy” in the way people often imagine. I started with curiosity and a lotof uncertainty........`,
+    link: "https://www.linkedin.com/posts/princesam_frontenddevelopment-learninginpublic-techjourney-activity-7407470390718943232-KxSd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFy-PasBXHhOpYhdLH76gGSacedHh5RZhS4",
+  },
+  {
+    date: "Feb 7",
+    readTime: "10 min",
+    category: " Build",
+    heading: "The “One-Line” Breakthrough: Building Luna Commerce",
+    content: `I set a challenge for myself: build a high-level custom
+                  project for every major industry. I started with E-commerce,
+                  and that became Luna Commerce. Before writing a single line of
+                  code, I spent days wireframing, redesigning, and ......`,
+    link: "https://www.linkedin.com/posts/princesam_webdevelopment-softwareengineering-vanillajs-activity-7426973959927123968-Ig2E?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFy-PasBXHhOpYhdLH76gGSacedHh5RZhS4",
+  },
+];
+
+const recentPostsDIV = document.querySelector(".actual_recent_posts_cards_div");
+const individualRPCards = document.querySelector(
+  ".individual_recent_posts_cards",
+);
+const overaldivforRecent = document.querySelector(
+  ".actual_recent_posts_cards_div",
+);
+
+recentPosts.forEach((post) => {
+  const card = document.createElement("div");
+  card.classList.add("individual_recent_posts_cards");
+  card.innerHTML = `
+    <div class="date_read_time_category_on_RP">
+      ${post.date} - ${post.readTime} read -
+      <span class="category_on_RP">
+        <i class="fa-solid fa-paintbrush"></i>${post.category}
+      </span>
+    </div>
+    <div class="heading_on_RP">
+      <h4>${post.heading}</h4>
+    </div>
+    <div class="short_text_on_RP">
+      ${post.content}
+    </div>
+    <div class="see_n_the_social_on_RP">
+      <p>View on</p>
+      <div class="icon_for_social_on_RP">
+        <a href="${post.link}" target ="_blank">
+          <i class="devicon-linkedin-plain-wordmark colored"></i>
+        </a>
+      </div>
+    </div>
+  `;
+  overaldivforRecent.appendChild(card);
+});
+
+// Initialize EmailJS (NEW syntax from docs)
+emailjs.init({
+  publicKey: "N1VLNY8bYVWgG269X",
+  blockHeadless: true,
+  limitRate: {
+    id: "newsletter",
+    throttle: 10000, // 1 request every 10 seconds
+  },
+});
+
+const form = document.querySelector(".newsletter_form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      "service_2vc5rzk", // your service ID
+      "template_arca4cm", // your template ID
+      this, // the form element
+    )
+    .then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Subscribed successfully!");
+        form.reset();
+      },
+      function (error) {
+        console.error("FAILED...", error);
+      },
+    );
+});
