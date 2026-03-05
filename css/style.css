@@ -184,7 +184,9 @@ html {
   display: flex;
   align-items: center;
 }
-
+.elipseonsmallscreens {
+  display: none;
+}
 /* FIRST PAGE */
 #firstpage {
   margin-top: 5rem;
@@ -402,7 +404,7 @@ html {
 .get_in_touch_button_on_first_page {
   padding: 0.8rem;
   width: 140px;
-  border-radius: 4px;
+  border-radius: 12px;
   background-color: rgb(104, 6, 196);
   color: white;
   font-weight: 600;
@@ -418,7 +420,7 @@ html {
 .browse_projects_button_on_first_page {
   padding: 0.8rem;
   width: 190px;
-  border-radius: 4px;
+  border-radius: 12px;
   background-color: rgb(207, 207, 207);
   color: black;
   font-weight: 600;
@@ -720,8 +722,8 @@ html {
 
 .servicebox {
   width: 260px;
-  height: 240px;
-  padding: 1.2rem;
+  height: 250px;
+  padding: 1.3rem;
   border-radius: 16px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -1108,9 +1110,7 @@ html {
 .view_all_on_RP:hover {
   cursor: pointer;
 }
-.newsleter_and_lets_talk_div {
-  /* background-color: green; */
-}
+
 
 .lets_talk_div {
   width: 330px;
@@ -1572,6 +1572,9 @@ html {
     text-align: center;
     padding: 0 1rem;
   }
+  .elipseonsmallscreens {
+    display: flex;
+  }
 }
 
 /* Small Mobile Screens (480px and below) */
@@ -1586,6 +1589,9 @@ html {
     margin-left: 0.5rem;
   }
   .elipsecontentonsmallscreens.active {
+    display: flex;
+  }
+  .elipseonsmallscreens {
     display: flex;
   }
   .elipsecontentonsmallscreens {
@@ -1865,6 +1871,9 @@ html {
   }
   .pestkell-flex-start-project {
     margin: 0 auto;
+  }
+  .elipseonsmallscreens{
+    display: flex;
   }
 }
 

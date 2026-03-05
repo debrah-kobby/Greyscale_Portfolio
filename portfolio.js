@@ -333,7 +333,7 @@ recentPosts.forEach((post) => {
 });
 
 /* ── EMAILJS ── */
-emailjs.init({
+/* emailjs.init({
   publicKey: "N1VLNY8bYVWgG269X",
   blockHeadless: true,
   limitRate: {
@@ -358,3 +358,75 @@ form.addEventListener("submit", function (e) {
     },
   );
 });
+ */
+
+document
+  .querySelector(".newsletter_form")
+  .addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = document.querySelector(".newsletter_email").value;
+    const btn = document.querySelector(".subscribe_buttn_on_NL");
+
+    btn.textContent = "Checking...";
+    btn.disabled = true;
+
+    const API_KEY =
+      "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";
+
+    try {
+      // Step 1: Check if contact exists in list #4 specifically
+      const checkResponse = await fetch(
+        `https://api.brevo.com/v3/contacts/${encodeURIComponent(email)}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "api-key": API_KEY,
+          },
+        },
+      );
+
+      if (checkResponse.status === 200) {
+        const contactData = await checkResponse.json();
+
+        // Check if list #4 is in their list IDs
+        if (contactData.listIds && contactData.listIds.includes(4)) {
+          btn.textContent = "Subscribe";
+          btn.disabled = false;
+          alert("This email is already subscribed to the newsletter!");
+          document.querySelector(".newsletter_email").value = "";
+
+          return;
+        }
+      }
+
+      // Step 2: Not in list #4, go ahead and add them
+      const addResponse = await fetch("https://api.brevo.com/v3/contacts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "api-key": API_KEY,
+        },
+        body: JSON.stringify({
+          email: email,
+          listIds: [4],
+          updateEnabled: true,
+        }),
+      });
+
+      if (addResponse.status === 201 || addResponse.status === 204) {
+        btn.textContent = "Subscribed";
+        btn.disabled = false; // button stays active
+        document.querySelector(".newsletter_email").value = "";
+      } else {
+        btn.textContent = "Subscribe";
+        btn.disabled = false;
+        alert("Something went wrong, please try again.");
+      }
+    } catch (err) {
+      btn.textContent = "Subscribe";
+      btn.disabled = false;
+      alert("Network error, please try again.");
+    }
+  });
