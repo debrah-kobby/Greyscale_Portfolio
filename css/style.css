@@ -195,34 +195,170 @@ html {
 }
 
 .getintouchmodalonfirstpage {
-  display: none; /* hidden by default */
-  position: fixed; /* cover the whole viewport */
+  display: none;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
-  justify-content: center; /* center modal horizontally */
-  align-items: center; /* center modal vertically */
-  z-index: 1000; /* above all other content */
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .getintouchmodalonfirstpage .modal-content {
-  padding: 1.5rem;
-  background-color: rgb(185, 185, 185); /* modal box color */
-  border-radius: 20px;
+  padding: 2rem 2.2rem 1.8rem;
+  background-color: #ffffff;
+  border-radius: 24px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 340px;
 }
 
-.getintouchmodalonfirstpage i {
-  font-size: 2.6rem;
-  color: rgb(56, 56, 56);
+.git-modal-header {
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
-.getintouchmodalonfirstpage i:hover {
-  transform: scale(1.1);
+
+.git-modal-icon {
+  width: 48px;
+  height: 48px;
+  background: #f3f0ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+  font-size: 1.2rem;
   color: blueviolet;
+}
+
+.git-modal-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 0.25rem;
+}
+
+.git-modal-sub {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0;
+}
+
+.git-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  text-decoration: none;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.git-row:hover {
+  transform: translateX(4px);
+  opacity: 0.9;
+}
+
+.git-wa {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+.git-em {
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+}
+.git-ph {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.git-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.git-wa-box {
+  background: #22c55e;
+}
+.git-em-box {
+  background: #7c3aed;
+}
+.git-ph-box {
+  background: #2563eb;
+}
+
+.git-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.git-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.git-wa .git-label {
+  color: #15803d;
+}
+.git-em .git-label {
+  color: #5b21b6;
+}
+.git-ph .git-label {
+  color: #1d4ed8;
+}
+
+.git-value {
+  font-size: 0.75rem;
+}
+
+.git-wa .git-value {
+  color: #166534;
+}
+.git-em .git-value {
+  color: #6d28d9;
+}
+.git-ph .git-value {
+  color: #1e40af;
+}
+
+.git-arrow {
+  margin-left: auto;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+}
+
+.git-wa .git-arrow {
+  color: #22c55e;
+}
+.git-em .git-arrow {
+  color: #7c3aed;
+}
+.git-ph .git-arrow {
+  color: #2563eb;
+}
+
+.git-footer-note {
+  text-align: center;
+  font-size: 0.72rem;
+  color: #bbb;
+  margin: 0.5rem 0 0;
 }
 .toastforresumedownloaded {
   display: flex;
@@ -1111,7 +1247,6 @@ html {
   cursor: pointer;
 }
 
-
 .lets_talk_div {
   width: 330px;
   display: flex;
@@ -1872,7 +2007,7 @@ html {
   .pestkell-flex-start-project {
     margin: 0 auto;
   }
-  .elipseonsmallscreens{
+  .elipseonsmallscreens {
     display: flex;
   }
 }

@@ -296,6 +296,16 @@ const recentPosts = [
     content: `I set a challenge for myself: build a high-level custom project for every major industry. I started with E-commerce, and that became Luna Commerce. Before writing a single line of code, I spent days wireframing, redesigning, and ......`,
     link: "https://www.linkedin.com/posts/princesam_webdevelopment-softwareengineering-vanillajs-activity-7426973959927123968-Ig2E?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFy-PasBXHhOpYhdLH76gGSacedHh5RZhS4",
   },
+  {
+    date: "Mar 20",
+    readTime: "8 min",
+    category: "Security",
+    heading:
+      "Several websites later, I finally started learning how to build them securely.",
+    content: `I’ve been studying the OWASP Top 10 - the global standard for the most critical web application security risks.
+    Not because a lecturer told me to.Because I realised that knowing how to build something without knowing how it breaks is only half the skill. ......`,
+    link: "https://www.linkedin.com/posts/princesam_websecurity-owasp-cybersecurity-activity-7440430976637251585-p-Iz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFy-PasBXHhOpYhdLH76gGSacedHh5RZhS4",
+  },
 ];
 
 const overaldivforRecent = document.querySelector(
@@ -374,3 +384,10 @@ document
       alert("Network error, please try again.");
     }
   });
+
+function viewPosts() {
+  window.open(
+    "https://www.linkedin.com/in/princesam/recent-activity/all/",
+    "_blank",
+  );
+}
