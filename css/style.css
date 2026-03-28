@@ -44,7 +44,6 @@ html {
   padding: 0.3rem;
   scroll-behavior: smooth;
   touch-action: pan-y;
-  /* overflow-x: hidden; */
   width: 100%;
 }
 .fixed {
@@ -59,7 +58,7 @@ html {
 }
 .hideDisplay {
   opacity: 0 !important;
-  display: flex !important; /* keep it in layout, just invisible */
+  display: flex !important;
   pointer-events: none;
 }
 
@@ -77,9 +76,8 @@ html {
   width: 100%;
 }
 
-/* Replace your existing .main-nav with this */
 .main-nav {
-  position: fixed; /* Changed from sticky to fixed */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -87,7 +85,6 @@ html {
   z-index: 1000;
   background-color: white;
   padding: 0.3rem;
-  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
 }
 
 .middle-nav-elements {
@@ -119,7 +116,7 @@ html {
 .middle-nav-elements a:hover {
   color: blueviolet;
   transform: scale(1.1);
-  transition: all o.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 #home_link_on_nav {
@@ -153,14 +150,10 @@ html {
   font-size: 0.9rem;
   font-family: "Inter", "Segoe UI", sans-serif;
   cursor: pointer;
-
-  /* modern neutral look */
   border: 1px solid #d3d3d3;
   background-color: #fafafa;
   color: #333;
-
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-
   transition:
     background-color 0.2s ease,
     box-shadow 0.2s ease;
@@ -187,6 +180,7 @@ html {
 .elipseonsmallscreens {
   display: none;
 }
+
 /* FIRST PAGE */
 #firstpage {
   margin-top: 5rem;
@@ -636,21 +630,37 @@ html {
 /* SKILLS PAGE */
 .skillstab {
   display: flex;
-  gap: 3rem;
-  background-color: rgb(224, 224, 224);
-  border-radius: 7px;
-  width: 65%;
-  padding: 0.3rem;
+  gap: 0.3rem;
+  background-color: #f0ebff;
+  border-radius: 50px;
+  width: fit-content;
+  max-width: 90%;
+  padding: 0.35rem;
   font-family: "Poppins", sans-serif;
   margin: 0 auto;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   justify-content: center;
-}
-.individualtab {
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(138, 43, 226, 0.15);
+  box-shadow: 0 2px 12px rgba(138, 43, 226, 0.08);
+  flex-wrap: wrap;
 }
 
+.individualtab {
+  cursor: pointer;
+  padding: 0.45rem 1.1rem;
+  border-radius: 50px;
+  color: #666;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+.individualtab:hover {
+  color: blueviolet;
+  background-color: rgba(138, 43, 226, 0.07);
+}
 .individualtabcontent {
   display: flex;
   background-color: white;
@@ -669,80 +679,111 @@ html {
   transition: all 0.3s ease-in-out;
 }
 
-.rightwebdevcontentstuff {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+.content-for-skills-tabs {
+  background: linear-gradient(135deg, #f5f0ff 0%, #faf8ff 100%);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border: 1px solid rgba(138, 43, 226, 0.12);
 }
 
-.eachwebdevstack {
-  background-color: rgb(214, 214, 214);
-  border-radius: 10px;
+.individualtabcontent {
+  display: none;
+  gap: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.active_tab_content {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
-  font-size: 1rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  height: 25px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  background-color: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.left_content_on_webdevcontent {
+  width: 40%;
+  transition: all 0.3s ease-in-out;
+  border-right: 1px solid rgba(138, 43, 226, 0.12);
+  padding-right: 2rem;
 }
 
 .chevronbeofrewebdevtext {
-  background-color: rgb(214, 214, 214);
-  width: 25px;
-  height: 25px;
+  width: 38px;
+  height: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.39);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background: #f0ebff;
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  border-radius: 10px;
+  padding: 0.6rem;
+  color: blueviolet;
+  font-size: 0.8rem;
+  box-shadow: none;
+  backdrop-filter: none;
+  margin-right: 0.6rem;
 }
 
 .main-content-heading {
   display: flex;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .main-content-heading p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: bold;
+  color: #111;
 }
 
 .secondary-content-heading {
-  margin-top: 0.5rem;
-  color: rgb(59, 59, 59);
+  margin-top: 0.3rem;
+  color: rgb(100, 100, 100);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.7;
   width: 90%;
 }
 
-.left_content_on_webdevcontent {
-  width: 50%;
-  transition: all 0.3s ease-in-out;
+.rightwebdevcontentstuff {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  align-content: flex-start;
 }
 
+.eachwebdevstack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.78rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  background: #fff;
+  color: #5b21b6;
+  border: 1px solid rgba(138, 43, 226, 0.22);
+  box-shadow: 0 2px 8px rgba(138, 43, 226, 0.07);
+  backdrop-filter: none;
+  height: auto;
+  transition: all 0.2s ease;
+}
+
+.eachwebdevstack:hover {
+  background: blueviolet;
+  color: white;
+  border-color: blueviolet;
+  box-shadow: 0 4px 14px rgba(138, 43, 226, 0.3);
+}
 .active_skill_tab {
-  background-color: white;
-  border-radius: 7px;
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
-  color: blueviolet;
-  font-weight: bold;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease-in-out;
+  background-color: blueviolet;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(138, 43, 226, 0.35);
 }
-
+.active_skill_tab:hover {
+  color: white;
+  background-color: blueviolet;
+}
 .content-for-skills-tabs {
   background-color: rgb(240, 240, 240);
   border-radius: 15px;
@@ -758,10 +799,13 @@ html {
   margin-bottom: 2rem;
 }
 
-/* EXPERIENCE */
+/* ═══════════════════════════════════
+   EXPERIENCE — NEW CARD LAYOUT
+   ═══════════════════════════════════ */
 .experience_article {
   padding: 0.4rem;
   margin-left: 1.4rem;
+  margin-right: 1.4rem;
   margin-top: 4rem;
 }
 
@@ -770,56 +814,172 @@ html {
   font-size: 2.5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.eachexpereinceboxwrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
 .eachexpereincebox {
-  display: grid;
-  grid-template-columns: 0.5fr 1.5fr 1.5fr 3fr;
-  grid-template-areas: "expimage exprole dateexp expactual";
-  margin-top: 0.4rem;
+  position: relative;
+  border: 1.5px solid rgba(138, 43, 226, 0.18);
+  border-radius: 20px;
+  padding: 2rem 1.5rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(138, 43, 226, 0.06);
+  min-height: 420px;
+}
+
+.eachexpereincebox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, blueviolet, #c084fc);
+  border-radius: 20px 20px 0 0;
+}
+
+.eachexpereincebox:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(138, 43, 226, 0.14);
+}
+
+.experiencecardnumberbadge {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(138, 43, 226, 0.35);
   font-family: "Poppins", sans-serif;
-  align-items: center;
-}
-
-.datesfroexperiencediv {
-  grid-area: "dateexp";
-}
-
-.rulerforimageandtextforexperinece {
-  border: 1px solid blueviolet;
-  width: 190px;
-  height: 1px;
-  border-radius: 7px;
-}
-
-.dateforexperience {
-  color: blueviolet;
-}
-
-.lefttextforexpereinces {
-  grid-area: "exprole";
-  text-align: center;
-}
-
-.rightactualexperinece {
-  grid-area: "expactual";
-}
-
-.locationofexperience {
-  color: rgb(88, 88, 88);
 }
 
 .imageforexperience {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: #f3edfa;
   display: flex;
   align-items: center;
-  grid-area: "expimage";
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid rgba(138, 43, 226, 0.12);
+}
+
+.imageforexperience img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+}
+
+.lefttextforexpereinces {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
 }
 
 .positionforexperience {
-  font-weight: bold;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-/* SERVICES */
+.companyforexperience {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: blueviolet;
+}
+
+.locationofexperience {
+  font-size: 0.78rem;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.locationofexperience i {
+  font-size: 0.7rem;
+  color: blueviolet;
+}
+
+.datesfroexperiencediv {
+  display: flex;
+}
+
+.dateforexperience {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #f3edfa;
+  color: blueviolet;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid rgba(138, 43, 226, 0.15);
+  font-family: "Poppins", sans-serif;
+}
+
+.dateforexperience i {
+  font-size: 0.65rem;
+}
+
+.rulerforimageandtextforexperinece {
+  border: none;
+  border-top: 1px solid rgba(138, 43, 226, 0.1);
+  margin: 0;
+  width: 100%;
+}
+
+.rightactualexperinece {
+  flex: 1;
+}
+
+.actualexperieence {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.7;
+  font-family: "Poppins", sans-serif;
+}
+
+.experiencetagsdiv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.eachexperiencetag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid rgba(138, 43, 226, 0.25);
+  color: blueviolet;
+  letter-spacing: 0.02em;
+  font-family: "Poppins", sans-serif;
+}
+
 #services {
   padding: 0.4rem;
   margin-top: 4rem;
@@ -834,63 +994,159 @@ html {
   color: blueviolet;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
+  text-align: center;
 }
 
 .secondheadingforservicesarticle {
   color: rgb(110, 110, 110);
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .overalldivforserviceboxes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.3rem;
+  margin-top: 1.5rem;
+  width: 96%;
+  max-width: 1100px;
 }
 
-.service_box_paragraph {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.85rem;
-  margin-top: 0.3rem;
-}
-
-.servicebox {
-  width: 260px;
-  height: 250px;
-  padding: 1.3rem;
-  border-radius: 16px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+/* base card */
+.eachservicebox {
+  position: relative;
+  border: 1.5px dashed rgba(138, 43, 226, 0.3);
+  border-radius: 18px;
+  padding: 1.4rem 1.3rem 1.3rem;
+  background: #fff;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  gap: 0.7rem;
+  overflow: hidden;
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    background 0.3s ease;
+    border 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+  box-shadow: 0 4px 18px rgba(138, 43, 226, 0.05);
 }
 
-.servicebox:hover {
-  transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+/* hover — solid border */
+.eachservicebox:hover {
+  border: 2px solid blueviolet;
+  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.13);
+  transform: translateY(-5px);
 }
 
-.servicebox i {
-  font-size: 3rem;
+/* top accent line fades in on hover */
+.eachservicebox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, blueviolet, #c084fc);
+  border-radius: 18px 18px 0 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.eachservicebox:hover::before {
+  opacity: 1;
+}
+
+/* icon + badge row */
+.serviceiconandnumberdiv {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.iconwrapforeachservicebox {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #f5f0ff;
+  border: 1px solid rgba(138, 43, 226, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   color: blueviolet;
-  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.servicecardnumberbadge {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(138, 43, 226, 0.3);
+  font-family: "Poppins", sans-serif;
+  margin-left: auto;
 }
 
 .service_box_heading {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  color: #111;
+  margin: 0;
+}
+
+.service_box_paragraph {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+/* flow chips */
+.servicechiptrack {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.eachservicechip {
+  padding: 0.22rem 0.6rem;
+  border: 1.5px solid rgba(138, 43, 226, 0.28);
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: blueviolet;
+  background: #fff;
+  white-space: nowrap;
+}
+
+.servicearrowbetweenchips {
+  font-size: 0.75rem;
+  color: rgba(138, 43, 226, 0.45);
+  font-weight: 700;
+}
+
+/* tool tags */
+.servicetooldiv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.eachservicetool {
+  padding: 0.18rem 0.55rem;
+  background: #f5f0ff;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #5b21b6;
+  border: 1px solid rgba(138, 43, 226, 0.12);
+  white-space: nowrap;
 }
 
 /* PROJECTS */
@@ -996,7 +1252,6 @@ html {
 }
 
 .overall_div_for_full_project_card_display {
-  /* remove position: fixed, top, left — the overlay handles centering now */
   width: 580px;
   height: auto;
   background-color: #d5cddd;
@@ -1084,16 +1339,12 @@ html {
 }
 .category_and_stack_div_on_FPCD,
 .youtube_and_live_icons_on_FPCD {
-  /*  display: flex;
-  justify-content: space-between; */
   width: 80%;
   margin-top: 1rem;
 }
 .category_on_FPCD,
 .youtube_on_FPCD {
   margin-right: auto;
-  /* font-family: "Exo 2", sans-serif;
-  font-family: "Orbitron", sans-serif; */
 }
 .category_on_FPCD {
   font-size: 0.9rem;
@@ -1112,6 +1363,7 @@ html {
   width: 115px;
   height: 59px;
 }
+
 /* FOOTER SECTION */
 .footer-overall-div {
   display: flex;
@@ -1153,14 +1405,12 @@ html {
   font-family: "Exo 2", sans-serif;
 }
 
-/*RECENT POSTS AND NEwSLETTERS*/
+/* RECENT POSTS AND NEWSLETTERS */
 .overall_div_for_recent_post_and_newsletters {
   display: flex;
-
   padding: 2rem;
   margin-left: 3rem;
   margin-right: 2rem;
-
   margin-top: 4rem;
 }
 .recent_posts_div {
@@ -1183,10 +1433,7 @@ html {
 }
 
 .category_on_RP {
-  padding: 0.2rem;
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
-
+  padding: 0.2rem 0.4rem;
   background-color: rgb(185, 185, 185);
   border-radius: 12px;
 }
@@ -1216,7 +1463,6 @@ html {
   display: flex;
   align-items: center;
 }
-
 .icon_for_social_on_RP {
   display: flex;
   justify-content: center;
@@ -1239,9 +1485,8 @@ html {
   padding: 0.4rem;
   border-radius: 7px;
   font-family: "Exo 2", sans-serif;
-
-  border: 1px solid rgba(255, 255, 255, 0.2); /* glass edge */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* depth */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 .view_all_on_RP:hover {
   cursor: pointer;
@@ -1297,7 +1542,6 @@ html {
   display: flex;
   justify-content: center;
 }
-
 .email_field_on_newsletter input::placeholder {
   font-size: 0.8rem;
 }
@@ -1348,43 +1592,36 @@ html {
 .lets_talk_button_on_LT:hover {
   cursor: pointer;
 }
-/* COMPREHENSIVE RESPONSIVE MEDIA QUERIES */
 
-/* Large Tablets and Small Laptops (1024px and below) */
+/* ══════════════════════════════════════════
+   RESPONSIVE MEDIA QUERIES
+   ══════════════════════════════════════════ */
+
 @media screen and (max-width: 1024px) {
-  /* FIRST PAGE */
   .firstpage_div_of_items {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     gap: 1rem;
   }
-
   .picture_on_firstpage {
     width: 300px;
     height: 300px;
   }
-
   .picture_on_firstpage img {
     width: 280px;
   }
-
   .hey_im,
   .actualnameonfirstpage,
   .secondactualnameonfirstpage {
     font-size: 3rem;
   }
-
-  /* ABOUT ME */
   .left-and-right-div-in-in-about {
     grid-template-columns: 1fr 1.5fr;
   }
-
   .left-image-in-about img {
     width: 300px;
     height: 300px;
   }
-
-  /* SKILLS */
   .skillstab {
     width: 85%;
     gap: 1.5rem;
@@ -1392,41 +1629,62 @@ html {
   }
 
   /* EXPERIENCE */
-  .eachexpereincebox {
-    grid-template-columns: 0.6fr 1.5fr 1.5fr 2.5fr;
+  .eachexpereinceboxwrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  /* PROJECTS */
   .overalldivforallprojects {
     justify-content: center;
     margin-left: 0;
   }
+
+  .overall_div_for_recent_post_and_newsletters {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    gap: 2rem;
+  }
+  .recent_posts_div {
+    width: 100%;
+    max-width: 700px;
+  }
+  .newsleter_and_lets_talk_div {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  .lets_talk_div,
+  .newsletter_div {
+    width: 320px;
+  }
+  .overalldivforserviceboxes {
+    grid-template-columns: repeat(2, 1fr);
+    width: 98%;
+  }
 }
 
-/* Tablets (768px and below) */
 @media screen and (max-width: 768px) {
-  /* HEADER - NAVIGATION */
   .resume_downloader_on_nav {
     display: none !important;
   }
-
   .debrah_kobby-on-nav {
     margin-left: 1rem;
   }
-
   .div-of-middle-nav-elements {
     width: auto;
     margin-right: 1rem;
     margin-top: 0;
     margin-left: auto;
   }
-
   .div-of-all-nav-elements {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
   .middle-nav-elements {
     gap: 0.8rem;
     font-size: 0.85rem;
@@ -1438,14 +1696,17 @@ html {
     width: auto;
     padding: 0.3rem 0.8rem;
   }
+  .middle-nav-elements .aboutme_on_nav,
+  .middle-nav-elements .skills_on_mid_nav,
+  .middle-nav-elements .posts_on_nav {
+    display: none;
+  }
 
-  /* FIRST PAGE - MOBILE LAYOUT */
   #firstpage {
     margin-top: 2rem;
     height: auto;
     min-height: 100vh;
   }
-
   .firstpage_div_of_items {
     display: flex;
     flex-direction: column;
@@ -1453,62 +1714,48 @@ html {
     margin: 1rem;
     gap: 2rem;
   }
-
-  /* Picture comes first on mobile */
   .picture_on_firstpage {
     order: 1;
     width: 280px;
     height: 280px;
     margin: 0 auto;
   }
-
   .picture_on_firstpage img {
     width: 250px;
   }
-
-  /* Social links come second, below picture */
   .social_on_first_page {
     order: 2;
     flex-direction: row;
     gap: 1.5rem;
     margin: 0;
   }
-
-  /* Writing area comes third */
   .writing_area_on_first_page {
     order: 3;
     text-align: center;
     width: 100%;
   }
-
   .hey_im {
     font-size: 2.5rem;
     margin-bottom: -0.5rem;
   }
-
   .actualnameonfirstpage {
     font-size: 2.5rem;
   }
-
   .secondactualnameonfirstpage {
     font-size: 2.5rem;
     margin-top: -0.3rem;
   }
-
   .textwritingstackonfirstpage {
     font-size: 1.1rem;
     justify-content: center;
     display: flex;
   }
-
   .long_intro_text_on_first_page {
     font-size: 1rem;
     justify-content: center;
     text-align: center;
     padding: 0 1rem;
   }
-
-  /* Buttons in row on mobile */
   .buttons_div_on_first_page {
     flex-direction: row;
     justify-content: center;
@@ -1516,15 +1763,12 @@ html {
     gap: 0.8rem;
     margin-top: 1rem;
   }
-
   .get_in_touch_button_on_first_page,
   .browse_projects_button_on_first_page {
     width: 140px;
     font-size: 0.85rem;
     padding: 0.7rem;
   }
-
-  /* Toast notification adjustment */
   .toastforresumedownloaded {
     width: 90%;
     left: 50%;
@@ -1533,86 +1777,68 @@ html {
     top: 5%;
     font-size: 0.9rem;
   }
-
-  /* Modal adjustment */
   .getintouchmodalonfirstpage .modal-content {
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: 1.2rem;
   }
-
   .getintouchmodalonfirstpage i {
     font-size: 2rem;
   }
 
-  /* ABOUT ME */
   #about_me {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
-
   .aboutmepageheading {
     font-size: 2.5rem;
     text-align: center;
   }
-
   .first_text_under_about {
     width: 95%;
   }
-
   .left-and-right-div-in-in-about {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "art"
-      "abt";
+    grid-template-areas: "art" "abt";
     gap: 2rem;
   }
-
   .left-image-in-about {
     display: flex;
     justify-content: center;
     margin-left: 0;
   }
-
   .left-image-in-about img {
     width: 280px;
     height: 280px;
   }
-
   .right-text-under-about {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .actualrighttxt {
     width: 95%;
   }
-
   .dottedstuff {
     margin-left: 0;
     justify-content: center;
   }
 
-  /* SKILLS */
   .skillstab {
     width: 95%;
     gap: 0.8rem;
     font-size: 0.75rem;
     flex-wrap: wrap;
   }
-
   .individualtabcontent {
     flex-direction: column;
     width: 98%;
     padding: 1.5rem;
   }
-
   .left_content_on_webdevcontent {
     width: 100%;
   }
-
   .rightwebdevcontentstuff {
     margin-top: 1.5rem;
     justify-content: center;
@@ -1623,85 +1849,53 @@ html {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
-
   .experience_section_header {
     font-size: 2rem;
-    text-align: center;
   }
-
-  .eachexpereincebox {
+  .eachexpereinceboxwrapper {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "expimage"
-      "exprole"
-      "dateexp"
-      "expactual";
-    gap: 1rem;
-    text-align: center;
-    margin-top: 1.5rem;
+  }
+  .eachexpereincebox {
+    min-height: auto;
   }
 
-  .imageforexperience {
-    justify-content: center;
-  }
-
-  .rulerforimageandtextforexperinece {
-    display: none;
-  }
-
-  .imageforexperience img {
-    width: 80px;
-    height: 80px;
-  }
-
-  /* SERVICES */
   .servicesarticleheading {
     font-size: 2.5rem;
-    text-align: center;
     padding: 0 1rem;
   }
-
   .secondheadingforservicesarticle {
-    text-align: center;
     padding: 0 1rem;
   }
-
   .overalldivforserviceboxes {
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 98%;
+  }
+  .eachservicebox {
+    padding: 1.1rem 1rem 1rem;
   }
 
-  .servicebox {
-    width: 280px;
-  }
-
-  /* PROJECTS */
   .projectssectionmainheader {
     font-size: 2rem;
   }
-
   .overalldivforallprojects {
     margin-left: 0;
     justify-content: center;
   }
-
   .individualprojectcards {
     width: 350px;
   }
-
   .individualporjectcardimages {
     width: 350px;
     height: 300px;
   }
 
-  /* FOOTER */
   .my-socials-in-footer {
     font-size: 1.8rem;
   }
-
   .links-div-in-footer {
     column-gap: 2rem;
   }
-
   .all-rights-reserved-text {
     font-size: 1rem;
     text-align: center;
@@ -1710,15 +1904,142 @@ html {
   .elipseonsmallscreens {
     display: flex;
   }
+
+  .project_card_overlay {
+    align-items: flex-start;
+    padding-top: 2.5rem;
+    overflow-y: auto;
+  }
+  .overall_div_for_full_project_card_display {
+    width: 92vw;
+    max-height: 88vh;
+    padding: 0 0.8rem 1.5rem;
+  }
+  .laptop_and_mobile_view_for_projects_div {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  .latop_view_for_full_project_card_display {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pc_image_on_FPCD img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  .mobile_view_for_ful_project_card_display {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .mobile_image_on_FPCD img {
+    width: 80px;
+    height: auto;
+  }
+  .stack_on_FPCD_mobile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 130px;
+  }
+  .stack_on_FPCD_mobile i {
+    font-size: 2rem;
+  }
+  .stack_on_FPCD {
+    display: none;
+  }
+  .category_and_stack_div_on_FPCD,
+  .youtube_and_live_icons_on_FPCD {
+    width: 90%;
+  }
+  .short_description_on_FPCD {
+    width: 90%;
+    font-size: 0.85rem;
+  }
+  .name_on_FPCD {
+    font-size: 1.3rem;
+  }
+  .logo_of_project img {
+    width: 90px;
+    height: auto;
+  }
+  .individual_recent_posts_cards {
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s;
+  }
+  .individual_recent_posts_cards:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .overall_div_for_recent_post_and_newsletters {
+    flex-direction: column;
+    padding: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+  .recent_posts_div {
+    order: 1;
+    width: 100%;
+  }
+  .newsleter_and_lets_talk_div {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+  }
+  .lets_talk_div {
+    order: 1;
+    width: 90%;
+    max-width: 400px;
+  }
+  .newsletter_div {
+    order: 2;
+    width: 90%;
+    max-width: 400px;
+  }
+  .heading_for_recent_posts {
+    font-size: 1.8rem;
+  }
+  .heading_on_RP {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+  .short_text_on_RP {
+    width: 95%;
+  }
+  .view_all_on_RP {
+    width: 200px;
+    margin-top: 1rem;
+  }
+  .subscribe_buttn_on_NL {
+    left: 76%;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
+    top: 11%;
+  }
 }
 
-/* Small Mobile Screens (480px and below) */
 @media screen and (max-width: 480px) {
   html {
     padding: 0.2rem;
   }
-
-  /* HEADER */
   .debrah_kobby-on-nav {
     font-size: 1rem;
     margin-left: 0.5rem;
@@ -1750,7 +2071,6 @@ html {
       "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     display: none;
   }
-
   .elipsecontentonsmallscreens a {
     text-decoration: none;
     color: black;
@@ -1762,35 +2082,33 @@ html {
   .middle-nav-elements .skills_on_mid_nav {
     display: none;
   }
-
   .div-of-middle-nav-elements {
     padding: 0.25rem 0.6rem;
   }
+  .middle-nav-elements .aboutme_on_nav,
+  .middle-nav-elements .skills_on_mid_nav,
+  .middle-nav-elements .posts_on_nav {
+    display: none;
+  }
 
-  /* FIRST PAGE */
   .picture_on_firstpage {
     width: 320px;
     height: 320px;
   }
-
   .picture_on_firstpage img {
     width: 300px;
   }
-
   .hey_im,
   .actualnameonfirstpage,
   .secondactualnameonfirstpage {
     font-size: 2rem;
   }
-
   .textwritingstackonfirstpage {
     font-size: 1.2rem;
   }
-
   .long_intro_text_on_first_page {
     font-size: 1.1rem;
   }
-
   .social_on_first_page {
     gap: 1.2rem;
   }
@@ -1800,13 +2118,11 @@ html {
   .social_on_first_page i {
     font-size: 1.8rem;
   }
-
   .buttons_div_on_first_page {
     gap: 0.6rem;
     flex-direction: column;
     align-items: center;
   }
-
   .get_in_touch_button_on_first_page,
   .browse_projects_button_on_first_page {
     width: 220px;
@@ -1814,29 +2130,22 @@ html {
     padding: 0.6rem;
   }
 
-  /* ABOUT ME */
   .aboutmepageheading {
     font-size: 2rem;
   }
-
   .first_text_under_about {
     font-size: 1rem;
   }
-
   .left-image-in-about img {
     width: 250px;
     height: 250px;
   }
-
   .rightside_onabout_heading {
     font-size: 1.5rem;
   }
-
   .actualrighttxt {
     font-size: 1rem;
-    /* margin-top: 2rem; */
   }
-
   .right-text-under-about {
     margin-top: -2rem;
   }
@@ -1846,26 +2155,21 @@ html {
     font-size: 1.2rem;
   }
 
-  /* SKILLS */
   .skillstab {
     margin-top: 1.2rem;
     font-size: 1.2rem;
     gap: 1.3rem;
   }
-
   .individualtabcontent {
     padding: 1rem;
   }
-
   .main-content-heading p {
     font-size: 1.2rem;
   }
-
   .secondary-content-heading {
     font-size: 0.9rem;
     width: 100%;
   }
-
   .eachwebdevstack {
     font-size: 0.85rem;
   }
@@ -1874,147 +2178,158 @@ html {
   .experience_section_header {
     font-size: 1.8rem;
   }
-  .imageforexperience img {
-    width: 130px;
-    height: 130px;
-  }
-
-  /* SERVICES */
-  .servicesarticleheading {
-    font-size: 2rem;
-  }
-
-  .servicebox {
-    width: 260px;
-    height: 220px;
-  }
-
-  .servicebox i {
-    font-size: 2.5rem;
-  }
 
   .service_box_heading {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
-
   .service_box_paragraph {
-    font-size: 0.8rem;
+    font-size: 0.74rem;
+  }
+  .eachservicechip {
+    font-size: 0.65rem;
+  }
+  .eachservicetool {
+    font-size: 0.6rem;
   }
 
-  /* PROJECTS */
   .projectssectionmainheader {
     font-size: 1.8rem;
   }
-
   .secondprojectsheading {
     font-size: 0.8rem;
     text-align: center;
   }
-
   .individualprojectcards {
     width: 300px;
   }
-
   .individualporjectcardimages {
     width: 300px;
     height: 280px;
   }
-
   .mainindividualprojectimage {
     width: 280px;
     height: auto;
   }
-
   .phonemockupimageforprojects {
     width: 60px;
     height: 120px;
   }
-
   .textunderprojectcardsheading {
     font-size: 1.1rem;
   }
-
   .actualtextunderproject {
     font-size: 0.85rem;
   }
 
-  /* FOOTER */
   .my-socials-in-footer {
     font-size: 1.5rem;
   }
-
   .links-div-in-footer i {
     font-size: 1.4rem;
   }
-
   .all-rights-reserved-text {
     font-size: 0.9rem;
   }
+
+  .overall_div_for_full_project_card_display {
+    width: 96vw;
+    padding: 0 0.6rem 1.2rem;
+  }
+  .pc_image_on_FPCD img {
+    max-width: 100%;
+    height: auto;
+  }
+  .mobile_image_on_FPCD img {
+    width: 65px;
+  }
+  .stack_on_FPCD_mobile i {
+    font-size: 1.8rem;
+  }
+  .name_on_FPCD {
+    font-size: 1.1rem;
+  }
+  .tagline_on_FPCD {
+    font-size: 1.1rem;
+  }
+  .short_description_on_FPCD {
+    font-size: 0.8rem;
+    width: 95%;
+  }
+  .youtube_and_live_icons_on_FPCD {
+    width: 95%;
+  }
+
+  .heading_for_recent_posts {
+    font-size: 1.5rem;
+  }
+  .overall_div_for_recent_post_and_newsletters {
+    padding: 0.5rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+  }
+  .heading_on_RP h4 {
+    font-size: 1rem;
+  }
+  .short_text_on_RP {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+  .date_read_time_category_on_RP {
+    font-size: 0.75rem;
+  }
+  .lets_talk_div,
+  .newsletter_div {
+    width: 95%;
+    max-width: none;
+  }
+  .first-text-in_LT {
+    font-size: 1.1rem;
+  }
+  .headingon_NL {
+    font-size: 0.85rem;
+  }
+  .email_field_on_newsletter input {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  .subscribe_buttn_on_NL {
+    left: 65%;
+    font-size: 0.9rem;
+  }
+  .view_all_on_RP {
+    width: 100%;
+    font-size: 0.85rem;
+  }
 }
 
-/* Extra Small Mobile (360px and below) */
 @media screen and (max-width: 360px) {
   .middle-nav-elements {
     font-size: 0.7rem;
     gap: 0.4rem;
   }
-
   .picture_on_firstpage {
     width: 200px;
     height: 200px;
   }
-
   .picture_on_firstpage img {
     width: 180px;
   }
-
   .hey_im,
   .actualnameonfirstpage,
   .secondactualnameonfirstpage {
     font-size: 1.8rem;
   }
-
   .individualprojectcards,
   .individualporjectcardimages {
     width: 280px;
   }
-
-  .servicebox {
-    width: 240px;
-  }
-  .about_me_on_about_page p::after {
-    right: 20%;
-  }
-  .about_me_on_about_page p::before {
-    left: 20%;
-  }
-  .skills_heading_on_skills_page p::before {
-    left: 30%;
-  }
-  .skills_heading_on_skills_page p::after {
-    right: 30%;
-  }
-
-  .experience-page-heading-div p::before {
-    left: 18%;
-  }
-  .projects-page-heading p::after {
-    right: 25%;
-  }
-  .projects-page-heading p::before {
-    left: 25%;
-  }
-  .pestkell-flex-start-project {
-    margin: 0 auto;
+  .overalldivforserviceboxes {
+    gap: 0.8rem;
   }
   .elipseonsmallscreens {
     display: flex;
   }
 }
-
-/* ══════════════════════════════════════════
-   NEW & UPDATED STYLES  (append to style.css)
-   ══════════════════════════════════════════ */
 
 /* ── Fix floating social icons pointer-events ── */
 .modsforsocilaicons {
@@ -2024,306 +2339,6 @@ html {
   pointer-events: all;
 }
 
-@media screen and (max-width: 768px) {
-  .project_card_overlay {
-    align-items: flex-start;
-    padding-top: 2.5rem;
-    overflow-y: auto;
-  }
-
-  .overall_div_for_full_project_card_display {
-    width: 92vw;
-    max-height: 88vh;
-    padding: 0 0.8rem 1.5rem;
-  }
-
-  /* PC view then mobile view stacked vertically */
-  .laptop_and_mobile_view_for_projects_div {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-  }
-
-  .latop_view_for_full_project_card_display {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .pc_image_on_FPCD img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-  }
-
-  /* Mobile view: phone mockup left, stack icons right */
-  .mobile_view_for_ful_project_card_display {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .mobile_image_on_FPCD img {
-    width: 80px;
-    height: auto;
-  }
-
-  .stack_on_FPCD_mobile {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: center;
-    max-width: 130px;
-  }
-  .stack_on_FPCD_mobile i {
-    font-size: 2rem;
-  }
-
-  /* Hide desktop stack on mobile */
-  .stack_on_FPCD {
-    display: none;
-  }
-
-  .category_and_stack_div_on_FPCD,
-  .youtube_and_live_icons_on_FPCD {
-    width: 90%;
-  }
-
-  .short_description_on_FPCD {
-    width: 90%;
-    font-size: 0.85rem;
-  }
-
-  .name_on_FPCD {
-    font-size: 1.3rem;
-  }
-
-  .logo_of_project img {
-    width: 90px;
-    height: auto;
-  }
-
-  /* Recent posts card style — mobile only */
-  .individual_recent_posts_cards {
-    border: 1px solid rgb(230, 230, 230);
-    border-radius: 12px;
-    padding: 1rem 1.2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    transition: box-shadow 0.2s;
-  }
-  .individual_recent_posts_cards:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .overall_div_for_full_project_card_display {
-    width: 96vw;
-    padding: 0 0.6rem 1.2rem;
-  }
-
-  .pc_image_on_FPCD img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .mobile_image_on_FPCD img {
-    width: 65px;
-  }
-
-  .stack_on_FPCD_mobile i {
-    font-size: 1.8rem;
-  }
-
-  .name_on_FPCD {
-    font-size: 1.1rem;
-  }
-  .tagline_on_FPCD {
-    font-size: 1.1rem;
-  }
-
-  .short_description_on_FPCD {
-    font-size: 0.8rem;
-    width: 95%;
-  }
-
-  .youtube_and_live_icons_on_FPCD {
-    width: 95%;
-  }
-}
-
-/* ══════════════════════════════════════════
-   RESPONSIVE – RECENT POSTS + NEWSLETTER
-   ══════════════════════════════════════════ */
-
-@media screen and (max-width: 1024px) {
-  .overall_div_for_recent_post_and_newsletters {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    gap: 2rem;
-  }
-
-  .recent_posts_div {
-    width: 100%;
-    max-width: 700px;
-  }
-
-  .newsleter_and_lets_talk_div {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .lets_talk_div,
-  .newsletter_div {
-    width: 320px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .overall_div_for_recent_post_and_newsletters {
-    flex-direction: column;
-    padding: 1rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    margin-top: 2rem;
-    gap: 2rem;
-  }
-
-  .recent_posts_div {
-    order: 1;
-    width: 100%;
-  }
-
-  .newsleter_and_lets_talk_div {
-    order: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-    width: 100%;
-  }
-
-  .lets_talk_div {
-    order: 1;
-    width: 90%;
-    max-width: 400px;
-  }
-
-  .newsletter_div {
-    order: 2;
-    width: 90%;
-    max-width: 400px;
-  }
-
-  .heading_for_recent_posts {
-    font-size: 1.8rem;
-  }
-  .heading_on_RP {
-    width: 90%;
-    font-size: 1.1rem;
-  }
-  .short_text_on_RP {
-    width: 95%;
-  }
-
-  .view_all_on_RP {
-    width: 200px;
-    margin-top: 1rem;
-  }
-
-  .subscribe_buttn_on_NL {
-    left: 76%;
-    font-size: 0.9rem;
-    padding: 0.3rem 0.5rem;
-    top: 11%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .heading_for_recent_posts {
-    font-size: 1.5rem;
-  }
-
-  .overall_div_for_recent_post_and_newsletters {
-    padding: 0.5rem;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
-  }
-
-  .heading_on_RP h4 {
-    font-size: 1rem;
-  }
-
-  .short_text_on_RP {
-    font-size: 0.85rem;
-    width: 100%;
-  }
-
-  .date_read_time_category_on_RP {
-    font-size: 0.75rem;
-  }
-
-  .lets_talk_div,
-  .newsletter_div {
-    width: 95%;
-    max-width: none;
-  }
-
-  .first-text-in_LT {
-    font-size: 1.1rem;
-  }
-  .headingon_NL {
-    font-size: 0.85rem;
-  }
-
-  .email_field_on_newsletter input {
-    width: 100%;
-    font-size: 0.8rem;
-  }
-
-  .subscribe_buttn_on_NL {
-    left: 65%;
-    font-size: 0.9rem;
-  }
-
-  .view_all_on_RP {
-    width: 100%;
-    font-size: 0.85rem;
-  }
-}
-
-/* ══════════════════════════════════════════
-   NAV – small-screen tweaks
-   ══════════════════════════════════════════ */
-
-@media screen and (max-width: 768px) {
-  .middle-nav-elements .aboutme_on_nav,
-  .middle-nav-elements .skills_on_mid_nav,
-  .middle-nav-elements .posts_on_nav {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .middle-nav-elements .aboutme_on_nav,
-  .middle-nav-elements .skills_on_mid_nav,
-  .middle-nav-elements .posts_on_nav {
-    display: none;
-  }
-}
-
 @supports (-webkit-touch-callout: none) {
   .email_field_on_newsletter input {
     font-size: 16px;
@@ -2331,4 +2346,101 @@ html {
   .email_field_on_newsletter input::placeholder {
     font-size: 16px;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .skillstab {
+    width: 95%;
+    gap: 0.3rem;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 0.35rem 0.5rem;
+    /* hide scrollbar but keep scroll */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .skillstab::-webkit-scrollbar {
+    display: none;
+  }
+
+  .individualtab {
+    flex-shrink: 0;
+    font-size: 0.78rem;
+    padding: 0.4rem 0.85rem;
+  }
+  .dottedstuff {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skillstab {
+    width: 98%;
+    font-size: 0.75rem;
+  }
+
+  .individualtab {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.72rem;
+  }
+  .dottedstuff {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 2rem;
+  }
+}
+
+.stickynoteonnewsletter {
+  background-color: #bae6fd;
+  padding: 1rem 1.2rem;
+  border-radius: 4px;
+  transform: rotate(-1.5deg);
+  box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  margin: 0.8rem auto 0.5rem;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.stickynotelabel {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #9ca3af;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stickynoteicon {
+  color: red;
+  font-size: 0.75rem;
+  margin-right: 0.4rem;
+}
+
+.stickynotetext {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+  color: #0c4a6e;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+
+.stickynoteauthor {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.65rem;
+  color: #9ca3af;
+  display: block;
+  margin-top: 0.5rem;
+  letter-spacing: 0.04em;
 }
