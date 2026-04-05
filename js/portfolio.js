@@ -112,12 +112,10 @@ individualTabs.forEach((btn) => {
 
 downloadResumeBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
-    setTimeout(() => {
-      toastForResumeDownloaded.style.display = "flex";
-    }, 4000);
+    toastForResumeDownloaded.style.display = "flex";
     setTimeout(() => {
       toastForResumeDownloaded.style.display = "none";
-    }, 9000);
+    }, 6000);
   });
 });
 
