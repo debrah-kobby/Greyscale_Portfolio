@@ -1,3 +1,5 @@
+//BLOG HTML
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog — Debrah Kobby</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/blog.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Exo:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Lavishly+Yours&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Exo:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Lavishly+Yours&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
     <link
@@ -18,328 +19,484 @@
     />
   </head>
   <body>
-    <!-- ===================== NAVBAR ===================== -->
-    <nav class="navbar" id="navbar">
-      <div class="nav_logo">
-        <a href="index.html"><i class="fa-solid fa-house"></i></a>
-      </div>
-      <ul class="nav-links" id="nav_links_list">
-        <li><a href="index.html#about_me_page">About</a></li>
-        <li><a href="index.html#projects_page">Projects</a></li>
-        <li><a href="blog.html" id="blog_nav_active">Blog</a></li>
-        <li><a href="index.html#get_in_touch_section">Contact</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger_btn">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-    </nav>
+    <header>
+      <nav class="main-nav" id="mainnavnav">
+        <div class="div-of-all-nav-elements">
+          <div class="debrah_kobby-on-nav">
+            <p>debrah_ <span class="only_kobby_selected_span">kobby</span>.</p>
+          </div>
 
-    <!-- ===================== BLOG HERO ===================== -->
-    <section class="blog_hero_section" id="blog_hero">
-      <div class="blog_hero_inner">
-        <div class="blog_hero_image_col">
-          <div class="blog_hero_img_wrapper">
+          <div class="resume_downloader_on_nav">
+            <div class="downloadresumeonheader">
+              <i class="fa-solid fa-download"></i>&nbsp;&nbsp;
+              <a
+                href="assets/Prince Debrah Bessah Sam --Resume (3.0).pdf"
+                download
+                class="downloadresume"
+                >Resume</a
+              >
+            </div>
+            <div class="toggle_light-and-dark-mode">
+              <i class="fa-regular fa-sun"></i>
+            </div>
+          </div>
+
+          <div class="div-of-middle-nav-elements">
+            <ul class="middle-nav-elements">
+              <li>
+                <a href="index.html" id="home_link_on_nav" class="home_on_nav"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="index.html#about_me" class="aboutme_on_nav">About</a>
+              </li>
+              <li>
+                <a href="#prrojectsection" class="projects_on_nav">Projects</a>
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  class="skills_on_mid_nav"
+                  class="skills_on_nav"
+                  >Skills</a
+                >
+              </li>
+              <li>
+                <a href="blog.html" class="posts_on_nav">Posts</a>
+              </li>
+              <!-- <div class="elipseonsmallscreens">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  <!--   <div class="elipsecontentonsmallscreens">
+      <div class="skillsinellipsis"><a href="#skills">Skills</a></div>
+      <div class="aboutinellipsis"><a href="#about_me">About</a></div>
+      <div class="postsinellipsis">
+        <a href="blog.html">Posts</a>
+      </div>
+       <div class="downloadresumeonellipsis">
+        <i class="fa-solid fa-download"></i>&nbsp;&nbsp;
+        <a
+          href="assets/Prince Debrah Bessah Sam -- Resume.pdf"
+          download
+          class="downloadresume_on_ellipse"
+          >Resume</a
+        >
+      </div> 
+    </div> -->
+
+    <div class="blog_view" id="blog_view">
+      <section class="blog_hero_section" id="blog_hero">
+        <div class="blog_hero_inner">
+          <div class="blog_hero_image_col">
+            <div class="blog_hero_img_wrapper">
+              <img
+                src="assets/IMG_4646.jpg"
+                alt="Debrah Kobby"
+                class="blog_hero_portrait"
+                onerror="
+                  this.style.background = 'blueviolet';
+                  this.removeAttribute('src');
+                "
+              />
+              <div class="blog_hero_img_accent"></div>
+            </div>
+          </div>
+          <div class="blog_hero_text_col">
+            <span class="blog_hero_tag">/ thoughts & insights</span>
+            <h1 class="blog_hero_name">
+              Debrah<br /><span class="blog_name_accent">Kobby</span>
+            </h1>
+            <p class="blog_hero_subtitle">
+              Writing about frontend engineering, Bitcoin,<br />and the things I
+              learn building in public.
+            </p>
+            <div class="blog_hero_stats">
+              <div class="blog_stat_item">
+                <span class="blog_stat_number" id="total_posts_count">0</span>
+                <span class="blog_stat_label">Articles</span>
+              </div>
+              <div class="blog_stat_divider"></div>
+              <div class="blog_stat_item">
+                <span class="blog_stat_number">LinkedIn</span>
+                <span class="blog_stat_label">+ more platforms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog_main_section" id="blog_main">
+        <div class="blog_main_inner">
+          <aside class="blog_sidebar" id="blog_sidebar">
+            <div class="sidebar_sticky">
+              <p class="sidebar_section_label">Browse by topic</p>
+              <ul class="blog_filter_list" id="blog_filter_list">
+                <li class="blog_filter_item active_filter" data-filter="all">
+                  All posts
+                </li>
+                <li class="blog_filter_item" data-filter="frontend">
+                  Frontend
+                </li>
+                <li class="blog_filter_item" data-filter="css">CSS</li>
+                <li class="blog_filter_item" data-filter="javascript">
+                  JavaScript
+                </li>
+                <li class="blog_filter_item" data-filter="bitcoin">Bitcoin</li>
+                <li class="blog_filter_item" data-filter="career">Career</li>
+                <li class="blog_filter_item" data-filter="tools">Tools</li>
+              </ul>
+              <div class="sidebar_search_wrapper">
+                <i class="fa-solid fa-magnifying-glass sidebar_search_icon"></i>
+                <input
+                  type="text"
+                  class="sidebar_search_input"
+                  id="blog_search_input"
+                  placeholder="Search posts..."
+                />
+              </div>
+            </div>
+          </aside>
+
+          <div class="blog_posts_area" id="blog_posts_area">
+            <div class="blog_posts_header">
+              <span class="posts_showing_label" id="posts_showing_label"
+                >All posts</span
+              >
+              <span class="posts_count_badge" id="posts_count_badge"
+                >0 articles</span
+              >
+            </div>
+
+            <div class="blog_posts_grid" id="blog_posts_grid">
+              <article
+                class="blog_post_card"
+                data-category="frontend"
+                data-postid="1"
+              >
+                <div class="post_card_top">
+                  <div class="post_card_tags">
+                    <span class="post_tag tag_frontend">Frontend</span>
+                  </div>
+                  <span class="post_card_date">Coming soon</span>
+                </div>
+                <h2 class="post_card_title">
+                  Your First Article Title Goes Here
+                </h2>
+                <p class="post_card_excerpt">
+                  Drop in your article excerpt here. This will be replaced once
+                  you send the full articles. The card layout is ready and
+                  waiting.
+                </p>
+                <div class="post_card_footer">
+                  <span class="post_read_time"
+                    ><i class="fa-regular fa-clock"></i> — min read</span
+                  >
+                  <button class="post_read_link" onclick="openPost(1)">
+                    Read post <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="blog_post_card post_card_featured"
+                data-category="bitcoin"
+                data-postid="2"
+              >
+                <div class="post_card_top">
+                  <div class="post_card_tags">
+                    <span class="post_tag tag_bitcoin">Bitcoin</span>
+                  </div>
+                  <span class="post_card_date">Coming soon</span>
+                </div>
+                <h2 class="post_card_title">
+                  Bitcoin Article Title Placeholder
+                </h2>
+                <p class="post_card_excerpt">
+                  Your Bitcoin or Summer of Bitcoin article excerpt goes here.
+                  Featured cards have a slight violet accent on the border.
+                </p>
+                <div class="post_card_footer">
+                  <span class="post_read_time"
+                    ><i class="fa-regular fa-clock"></i> — min read</span
+                  >
+                  <button class="post_read_link" onclick="openPost(2)">
+                    Read post <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="blog_post_card"
+                data-category="css"
+                data-postid="3"
+              >
+                <div class="post_card_top">
+                  <div class="post_card_tags">
+                    <span class="post_tag tag_css">CSS</span>
+                  </div>
+                  <span class="post_card_date">Coming soon</span>
+                </div>
+                <h2 class="post_card_title">
+                  CSS Deep Dive Article Placeholder
+                </h2>
+                <p class="post_card_excerpt">
+                  CSS article excerpt placeholder. Waiting for your real
+                  content. The tag, layout and hover animations are all active.
+                </p>
+                <div class="post_card_footer">
+                  <span class="post_read_time"
+                    ><i class="fa-regular fa-clock"></i> — min read</span
+                  >
+                  <button class="post_read_link" onclick="openPost(3)">
+                    Read post <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="blog_post_card"
+                data-category="javascript"
+                data-postid="4"
+              >
+                <div class="post_card_top">
+                  <div class="post_card_tags">
+                    <span class="post_tag tag_javascript">JavaScript</span>
+                  </div>
+                  <span class="post_card_date">Coming soon</span>
+                </div>
+                <h2 class="post_card_title">
+                  JavaScript Article Title Placeholder
+                </h2>
+                <p class="post_card_excerpt">
+                  JS article excerpt placeholder. All card interactivity, filter
+                  logic, and animations are wired and ready for real content.
+                </p>
+                <div class="post_card_footer">
+                  <span class="post_read_time"
+                    ><i class="fa-regular fa-clock"></i> — min read</span
+                  >
+                  <button class="post_read_link" onclick="openPost(4)">
+                    Read post <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="blog_post_card"
+                data-category="career"
+                data-postid="5"
+              >
+                <div class="post_card_top">
+                  <div class="post_card_tags">
+                    <span class="post_tag tag_career">Career</span>
+                  </div>
+                  <span class="post_card_date">Coming soon</span>
+                </div>
+                <h2 class="post_card_title">
+                  Career / Journey Article Placeholder
+                </h2>
+                <p class="post_card_excerpt">
+                  Career insight article excerpt placeholder. Share your
+                  journey, lessons learned, what you'd tell yourself earlier.
+                </p>
+                <div class="post_card_footer">
+                  <span class="post_read_time"
+                    ><i class="fa-regular fa-clock"></i> — min read</span
+                  >
+                  <button class="post_read_link" onclick="openPost(5)">
+                    Read post <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="blog_post_card"
+                data-category="tools"
+                data-postid="6"
+              >
+                <div class="post_card_top">
+                  <div class="post_card_tags">
+                    <span class="post_tag tag_tools">Tools</span>
+                  </div>
+                  <span class="post_card_date">Coming soon</span>
+                </div>
+                <h2 class="post_card_title">
+                  Tools & Dev Setup Article Placeholder
+                </h2>
+                <p class="post_card_excerpt">
+                  Tools article excerpt placeholder. Dev setup, VS Code configs,
+                  or workflow improvements you've written about.
+                </p>
+                <div class="post_card_footer">
+                  <span class="post_read_time"
+                    ><i class="fa-regular fa-clock"></i> — min read</span
+                  >
+                  <button class="post_read_link" onclick="openPost(6)">
+                    Read post <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="blog_empty_state"
+              id="blog_empty_state"
+              style="display: none"
+            >
+              <i class="fa-regular fa-folder-open"></i>
+              <p>No posts found in this category yet.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog_newsletter_section" id="blog_newsletter">
+        <div class="blog_newsletter_inner">
+          <div class="blog_newsletter_text">
+            <span class="lavishly_font blog_newsletter_accent"
+              >stay in the loop</span
+            >
+            <h2 class="blog_newsletter_heading">
+              Get new articles<br />in your inbox
+            </h2>
+            <p class="blog_newsletter_sub">
+              No spam. Just new posts on frontend, Bitcoin and tech — when I
+              publish.
+            </p>
+          </div>
+          <div class="blog_newsletter_form_col">
+            <div class="blog_newsletter_form_wrapper">
+              <input
+                type="email"
+                id="blog_email_input"
+                class="blog_newsletter_email_input"
+                placeholder="your@email.com"
+              />
+              <button class="blog_newsletter_btn" id="blog_subscribe_btn">
+                Subscribe <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+            <p class="blog_newsletter_msg" id="blog_newsletter_msg"></p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="blog_footer">
+        <p class="blog_footer_text">
+          © 2025 Debrah Kobby — <a href="index.html">Back to Portfolio</a>
+        </p>
+      </footer>
+    </div>
+
+    <div class="post_view" id="post_view">
+      <div class="post_top_bar">
+        <div class="post_top_bar_inner">
+          <button class="post_back_btn" onclick="closePost()">
+            <i class="fa-solid fa-arrow-left"></i> All posts
+          </button>
+          <span class="post_top_tag" id="post_view_tag"></span>
+          <span class="post_reading_time" id="post_view_read_time"></span>
+        </div>
+      </div>
+
+      <div class="post_layout">
+        <div class="post_content_col">
+          <div class="post_date_line" id="post_view_date">Coming soon</div>
+          <h1 class="post_main_title" id="post_view_title">Article Title</h1>
+          <div class="post_divider"></div>
+          <div class="post_body" id="post_view_body">
+            <p>
+              This is where the full article content will go. Drop in the
+              article and this section will render it beautifully.
+            </p>
+            <p>
+              The layout is styled and ready — <strong>bold text</strong>,
+              <em>italic text</em>, inline <code>code</code>, and code blocks
+              all work.
+            </p>
+            <h2>A Section Heading</h2>
+            <p>
+              You can structure long articles with headings like this.
+              Sub-sections keep long reads scannable.
+            </p>
+            <div class="post_code_block">
+              <div class="post_code_block_header">
+                <span class="post_code_label">Code Example</span>
+                <button class="post_code_copy" onclick="copyCode(this)">
+                  Copy Code
+                </button>
+              </div>
+              <pre><code>const example = () => {
+  return "Replace with real code";
+};</code></pre>
+            </div>
+            <p>
+              Continue with more article content here. This placeholder shows
+              the structure you can build.
+            </p>
+            <h3>Takeaway</h3>
+            <p>
+              Wrap up key points here. Your real articles will fill this out
+              once you drop them in.
+            </p>
+          </div>
+        </div>
+
+        <div class="post_sidebar_col">
+          <div class="post_sidebar_author">
             <img
-              src="assets/modifiednovera-portrait.png"
+              src="assets/IMG_4646.jpg"
               alt="Debrah Kobby"
-              class="blog_hero_portrait"
+              class="post_author_img"
               onerror="
                 this.style.background = 'blueviolet';
                 this.removeAttribute('src');
               "
             />
-            <div class="blog_hero_img_accent"></div>
+            <div class="post_author_name">Debrah Kobby</div>
+            <div class="post_author_role">Frontend Engineer</div>
           </div>
-        </div>
-        <div class="blog_hero_text_col">
-          <span class="blog_hero_tag">/ thoughts & insights</span>
-          <h1 class="blog_hero_name exo_font">
-            Debrah<br /><span class="blog_name_accent lavishly_font"
-              >Kobby</span
-            >
-          </h1>
-          <p class="blog_hero_subtitle">
-            Writing about frontend engineering, Bitcoin, and the things I learn
-            building in public.
-          </p>
-          <div class="blog_hero_stats">
-            <div class="blog_stat_item">
-              <span class="blog_stat_number" id="total_posts_count">0</span>
-              <span class="blog_stat_label">Articles</span>
-            </div>
-            <div class="blog_stat_divider"></div>
-            <div class="blog_stat_item">
-              <span class="blog_stat_number">LinkedIn</span>
-              <span class="blog_stat_label">+ more platforms</span>
-            </div>
+
+          <div>
+            <p class="post_sidebar_section_label">More posts</p>
+            <div class="post_nav_links" id="post_sidebar_links"></div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ===================== BLOG MAIN ===================== -->
-    <section class="blog_main_section" id="blog_main">
-      <div class="blog_main_inner">
-        <!-- FILTER SIDEBAR -->
-        <aside class="blog_sidebar" id="blog_sidebar">
-          <div class="sidebar_sticky">
-            <p class="sidebar_section_label">Browse by topic</p>
-            <ul class="blog_filter_list" id="blog_filter_list">
-              <li class="blog_filter_item active_filter" data-filter="all">
-                All posts
-              </li>
-              <li class="blog_filter_item" data-filter="frontend">Frontend</li>
-              <li class="blog_filter_item" data-filter="css">CSS</li>
-              <li class="blog_filter_item" data-filter="javascript">
-                JavaScript
-              </li>
-              <li class="blog_filter_item" data-filter="bitcoin">Bitcoin</li>
-              <li class="blog_filter_item" data-filter="career">Career</li>
-              <li class="blog_filter_item" data-filter="tools">Tools</li>
-            </ul>
-            <div class="sidebar_search_wrapper">
-              <i class="fa-solid fa-magnifying-glass sidebar_search_icon"></i>
-              <input
-                type="text"
-                class="sidebar_search_input"
-                id="blog_search_input"
-                placeholder="Search posts..."
-              />
-            </div>
-          </div>
-        </aside>
-
-        <!-- POSTS GRID -->
-        <div class="blog_posts_area" id="blog_posts_area">
-          <div class="blog_posts_header">
-            <span class="posts_showing_label" id="posts_showing_label"
-              >All posts</span
-            >
-            <span class="posts_count_badge" id="posts_count_badge"
-              >0 articles</span
-            >
-          </div>
-
-          <div class="blog_posts_grid" id="blog_posts_grid">
-            <!-- POST CARD: PLACEHOLDER — replace content when you drop articles in -->
-            <article
-              class="blog_post_card"
-              data-category="frontend"
-              data-postid="1"
-            >
-              <div class="post_card_top">
-                <div class="post_card_tags">
-                  <span class="post_tag tag_frontend">Frontend</span>
-                </div>
-                <span class="post_card_date">Coming soon</span>
-              </div>
-              <h2 class="post_card_title exo_font">
-                Your First Article Title Goes Here
-              </h2>
-              <p class="post_card_excerpt">
-                Drop in your article excerpt here. This will be replaced once
-                you send the full articles. The card layout is ready and
-                waiting.
-              </p>
-              <div class="post_card_footer">
-                <span class="post_read_time"
-                  ><i class="fa-regular fa-clock"></i> — min read</span
-                >
-                <a href="#" class="post_read_link"
-                  >Read post <i class="fa-solid fa-arrow-right"></i
-                ></a>
-              </div>
-            </article>
-
-            <article
-              class="blog_post_card post_card_featured"
-              data-category="bitcoin"
-              data-postid="2"
-            >
-              <div class="post_card_top">
-                <div class="post_card_tags">
-                  <span class="post_tag tag_bitcoin">Bitcoin</span>
-                </div>
-                <span class="post_card_date">Coming soon</span>
-              </div>
-              <h2 class="post_card_title exo_font">
-                Bitcoin Article Title Placeholder
-              </h2>
-              <p class="post_card_excerpt">
-                Your Bitcoin or Summer of Bitcoin article excerpt goes here.
-                Featured cards have a slight violet accent on the border.
-              </p>
-              <div class="post_card_footer">
-                <span class="post_read_time"
-                  ><i class="fa-regular fa-clock"></i> — min read</span
-                >
-                <a href="#" class="post_read_link"
-                  >Read post <i class="fa-solid fa-arrow-right"></i
-                ></a>
-              </div>
-            </article>
-
-            <article class="blog_post_card" data-category="css" data-postid="3">
-              <div class="post_card_top">
-                <div class="post_card_tags">
-                  <span class="post_tag tag_css">CSS</span>
-                </div>
-                <span class="post_card_date">Coming soon</span>
-              </div>
-              <h2 class="post_card_title exo_font">
-                CSS Deep Dive Article Placeholder
-              </h2>
-              <p class="post_card_excerpt">
-                CSS article excerpt placeholder. Waiting for your real content.
-                The tag, layout and hover animations are all active.
-              </p>
-              <div class="post_card_footer">
-                <span class="post_read_time"
-                  ><i class="fa-regular fa-clock"></i> — min read</span
-                >
-                <a href="#" class="post_read_link"
-                  >Read post <i class="fa-solid fa-arrow-right"></i
-                ></a>
-              </div>
-            </article>
-
-            <article
-              class="blog_post_card"
-              data-category="javascript"
-              data-postid="4"
-            >
-              <div class="post_card_top">
-                <div class="post_card_tags">
-                  <span class="post_tag tag_javascript">JavaScript</span>
-                </div>
-                <span class="post_card_date">Coming soon</span>
-              </div>
-              <h2 class="post_card_title exo_font">
-                JavaScript Article Title Placeholder
-              </h2>
-              <p class="post_card_excerpt">
-                JS article excerpt placeholder. All card interactivity, filter
-                logic, and animations are wired and ready for real content.
-              </p>
-              <div class="post_card_footer">
-                <span class="post_read_time"
-                  ><i class="fa-regular fa-clock"></i> — min read</span
-                >
-                <a href="#" class="post_read_link"
-                  >Read post <i class="fa-solid fa-arrow-right"></i
-                ></a>
-              </div>
-            </article>
-
-            <article
-              class="blog_post_card"
-              data-category="career"
-              data-postid="5"
-            >
-              <div class="post_card_top">
-                <div class="post_card_tags">
-                  <span class="post_tag tag_career">Career</span>
-                </div>
-                <span class="post_card_date">Coming soon</span>
-              </div>
-              <h2 class="post_card_title exo_font">
-                Career / Journey Article Placeholder
-              </h2>
-              <p class="post_card_excerpt">
-                Career insight article excerpt placeholder. Share your journey,
-                lessons learned, what you'd tell yourself earlier.
-              </p>
-              <div class="post_card_footer">
-                <span class="post_read_time"
-                  ><i class="fa-regular fa-clock"></i> — min read</span
-                >
-                <a href="#" class="post_read_link"
-                  >Read post <i class="fa-solid fa-arrow-right"></i
-                ></a>
-              </div>
-            </article>
-
-            <article
-              class="blog_post_card"
-              data-category="tools"
-              data-postid="6"
-            >
-              <div class="post_card_top">
-                <div class="post_card_tags">
-                  <span class="post_tag tag_tools">Tools</span>
-                </div>
-                <span class="post_card_date">Coming soon</span>
-              </div>
-              <h2 class="post_card_title exo_font">
-                Tools & Dev Setup Article Placeholder
-              </h2>
-              <p class="post_card_excerpt">
-                Tools article excerpt placeholder. Dev setup, VS Code configs,
-                or workflow improvements you've written about.
-              </p>
-              <div class="post_card_footer">
-                <span class="post_read_time"
-                  ><i class="fa-regular fa-clock"></i> — min read</span
-                >
-                <a href="#" class="post_read_link"
-                  >Read post <i class="fa-solid fa-arrow-right"></i
-                ></a>
-              </div>
-            </article>
-          </div>
-
-          <!-- EMPTY STATE (shown when filter returns nothing) -->
-          <div
-            class="blog_empty_state"
-            id="blog_empty_state"
-            style="display: none"
+      <div style="border-top: 1px solid var(--border); padding: 0 6%">
+        <div class="post_footer_nav">
+          <button
+            class="post_footer_nav_btn"
+            id="prev_post_btn"
+            onclick="navPost(-1)"
           >
-            <i class="fa-regular fa-folder-open"></i>
-            <p>No posts found in this category yet.</p>
+            <i class="fa-solid fa-arrow-left"></i> Previous Article
+          </button>
+          <div class="post_share_bar">
+            <span class="post_share_label">Share</span>
+            <i class="fa-brands fa-x-twitter post_share_icon"></i>
+            <i class="fa-brands fa-facebook post_share_icon"></i>
+            <i class="fa-brands fa-linkedin post_share_icon"></i>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== NEWSLETTER (reusing your existing system) ===================== -->
-    <section class="blog_newsletter_section" id="blog_newsletter">
-      <div class="blog_newsletter_inner">
-        <div class="blog_newsletter_text">
-          <span class="lavishly_font blog_newsletter_accent"
-            >stay in the loop</span
+          <button
+            class="post_footer_nav_btn"
+            id="next_post_btn"
+            onclick="navPost(1)"
           >
-          <h2 class="exo_font blog_newsletter_heading">
-            Get new articles<br />in your inbox
-          </h2>
-          <p class="blog_newsletter_sub">
-            No spam. Just new posts on frontend, Bitcoin and tech — when I
-            publish.
-          </p>
-        </div>
-        <div class="blog_newsletter_form_col">
-          <div class="blog_newsletter_form_wrapper">
-            <input
-              type="email"
-              id="blog_email_input"
-              class="blog_newsletter_email_input"
-              placeholder="your@email.com"
-            />
-            <button class="blog_newsletter_btn" id="blog_subscribe_btn">
-              Subscribe <i class="fa-solid fa-paper-plane"></i>
-            </button>
-          </div>
-          <p class="blog_newsletter_msg" id="blog_newsletter_msg"></p>
+            Next Article <i class="fa-solid fa-arrow-right"></i>
+          </button>
         </div>
       </div>
-    </section>
-
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="blog_footer">
-      <p class="blog_footer_text">
-        © 2025 Debrah Kobby — <a href="index.html">Back to Portfolio</a>
-      </p>
-    </footer>
-
+    </div>
     <script src="js/blog.js"></script>
   </body>
 </html>

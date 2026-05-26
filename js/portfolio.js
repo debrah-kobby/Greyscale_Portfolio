@@ -384,8 +384,5 @@ document
   });
 
 function viewPosts() {
-  window.open(
-    "https://www.linkedin.com/in/princesam/recent-activity/all/",
-    "_blank",
-  );
+  window.location.href = "blog.html";
 }
