@@ -726,7 +726,7 @@ a {
   border-color: var(--primary);
 }
 
-.blog_newsletter_btn {
+#blog_newsletter_btn {
   padding: 14px 24px;
   background: var(--primary);
   color: var(--white);

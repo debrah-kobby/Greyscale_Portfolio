@@ -1,11 +1,11 @@
-//BLOG HTML
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog — Debrah Kobby</title>
+    <link rel="icon" href="assets/IMG_4646.jpg" />
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,9 +44,7 @@
           <div class="div-of-middle-nav-elements">
             <ul class="middle-nav-elements">
               <li>
-                <a href="index.html" id="home_link_on_nav" class="home_on_nav"
-                  >Home</a
-                >
+                <a href="index.html" class="home_on_nav">Home</a>
               </li>
               <li>
                 <a href="index.html#about_me" class="aboutme_on_nav">About</a>
@@ -55,42 +53,20 @@
                 <a href="#prrojectsection" class="projects_on_nav">Projects</a>
               </li>
               <li>
-                <a
-                  href="#skills"
-                  class="skills_on_mid_nav"
-                  class="skills_on_nav"
+                <a href="#skills" class="skills_on_mid_nav skills_on_nav"
                   >Skills</a
                 >
               </li>
               <li>
-                <a href="blog.html" class="posts_on_nav">Posts</a>
+                <a href="blog.html" id="home_link_on_nav" class="posts_on_nav"
+                  >Posts</a
+                >
               </li>
-              <!-- <div class="elipseonsmallscreens">
-                <i class="fa-solid fa-ellipsis-vertical"></i>
-                <i class="fa-solid fa-ellipsis-vertical"></i>
-                <i class="fa-solid fa-ellipsis-vertical"></i>
-              </div> -->
             </ul>
           </div>
         </div>
       </nav>
     </header>
-  <!--   <div class="elipsecontentonsmallscreens">
-      <div class="skillsinellipsis"><a href="#skills">Skills</a></div>
-      <div class="aboutinellipsis"><a href="#about_me">About</a></div>
-      <div class="postsinellipsis">
-        <a href="blog.html">Posts</a>
-      </div>
-       <div class="downloadresumeonellipsis">
-        <i class="fa-solid fa-download"></i>&nbsp;&nbsp;
-        <a
-          href="assets/Prince Debrah Bessah Sam -- Resume.pdf"
-          download
-          class="downloadresume_on_ellipse"
-          >Resume</a
-        >
-      </div> 
-    </div> -->
 
     <div class="blog_view" id="blog_view">
       <section class="blog_hero_section" id="blog_hero">
@@ -115,8 +91,8 @@
               Debrah<br /><span class="blog_name_accent">Kobby</span>
             </h1>
             <p class="blog_hero_subtitle">
-              Writing about frontend engineering, Bitcoin,<br />and the things I
-              learn building in public.
+              Writing about frontend engineering, web security,<br />and the
+              things I learn building in public.
             </p>
             <div class="blog_hero_stats">
               <div class="blog_stat_item">
@@ -149,7 +125,9 @@
                 <li class="blog_filter_item" data-filter="javascript">
                   JavaScript
                 </li>
-                <li class="blog_filter_item" data-filter="bitcoin">Bitcoin</li>
+                <li class="blog_filter_item" data-filter="security">
+                  Security
+                </li>
                 <li class="blog_filter_item" data-filter="career">Career</li>
                 <li class="blog_filter_item" data-filter="tools">Tools</li>
               </ul>
@@ -176,28 +154,30 @@
             </div>
 
             <div class="blog_posts_grid" id="blog_posts_grid">
+              <!-- POST 1 -->
               <article
-                class="blog_post_card"
-                data-category="frontend"
+                class="blog_post_card post_card_featured"
+                data-category="career"
                 data-postid="1"
               >
                 <div class="post_card_top">
                   <div class="post_card_tags">
-                    <span class="post_tag tag_frontend">Frontend</span>
+                    <span class="post_tag tag_career">Career</span>
                   </div>
-                  <span class="post_card_date">Coming soon</span>
+                  <span class="post_card_date">December 2025</span>
                 </div>
                 <h2 class="post_card_title">
-                  Your First Article Title Goes Here
+                  From Curiosity to "I Can Code" — My First Step Into Tech
                 </h2>
                 <p class="post_card_excerpt">
-                  Drop in your article excerpt here. This will be replaced once
-                  you send the full articles. The card layout is ready and
-                  waiting.
+                  I didn't enter the tech space because it was trendy or because
+                  I had everything figured out. I started with curiosity and a
+                  lot of uncertainty — and a classic "Hello World" that changed
+                  everything.
                 </p>
                 <div class="post_card_footer">
                   <span class="post_read_time"
-                    ><i class="fa-regular fa-clock"></i> — min read</span
+                    ><i class="fa-regular fa-clock"></i> 3 min read</span
                   >
                   <button class="post_read_link" onclick="openPost(1)">
                     Read post <i class="fa-solid fa-arrow-right"></i>
@@ -205,27 +185,31 @@
                 </div>
               </article>
 
+              <!-- POST 2 -->
               <article
-                class="blog_post_card post_card_featured"
-                data-category="bitcoin"
+                class="blog_post_card"
+                data-category="frontend"
                 data-postid="2"
               >
                 <div class="post_card_top">
                   <div class="post_card_tags">
-                    <span class="post_tag tag_bitcoin">Bitcoin</span>
+                    <span class="post_tag tag_frontend">Frontend</span>
+                    <span class="post_tag tag_javascript">JavaScript</span>
                   </div>
-                  <span class="post_card_date">Coming soon</span>
+                  <span class="post_card_date">February 2026</span>
                 </div>
                 <h2 class="post_card_title">
-                  Bitcoin Article Title Placeholder
+                  The "One-Line" Breakthrough: Building Luna Commerce
                 </h2>
                 <p class="post_card_excerpt">
-                  Your Bitcoin or Summer of Bitcoin article excerpt goes here.
-                  Featured cards have a slight violet accent on the border.
+                  Three weeks stuck on a brutal CSS layout bug. Five hours
+                  debugging. One deleted line of code. This is what building a
+                  full e-commerce platform from scratch with Vanilla JS actually
+                  teaches you.
                 </p>
                 <div class="post_card_footer">
                   <span class="post_read_time"
-                    ><i class="fa-regular fa-clock"></i> — min read</span
+                    ><i class="fa-regular fa-clock"></i> 4 min read</span
                   >
                   <button class="post_read_link" onclick="openPost(2)">
                     Read post <i class="fa-solid fa-arrow-right"></i>
@@ -233,27 +217,30 @@
                 </div>
               </article>
 
+              <!-- POST 3 -->
               <article
                 class="blog_post_card"
-                data-category="css"
+                data-category="career"
                 data-postid="3"
               >
                 <div class="post_card_top">
                   <div class="post_card_tags">
-                    <span class="post_tag tag_css">CSS</span>
+                    <span class="post_tag tag_career">Career</span>
                   </div>
-                  <span class="post_card_date">Coming soon</span>
+                  <span class="post_card_date">March 2026</span>
                 </div>
                 <h2 class="post_card_title">
-                  CSS Deep Dive Article Placeholder
+                  "Say Not, I Am a Child" — The Power of the Words You Tell
+                  Yourself
                 </h2>
                 <p class="post_card_excerpt">
-                  CSS article excerpt placeholder. Waiting for your real
-                  content. The tag, layout and hover animations are all active.
+                  A post by Kwamena Ofori Bainn that stopped me mid-scroll.
+                  Words shape your inner world. Psychology calls it self-talk
+                  and the self-fulfilling prophecy. This is why it matters.
                 </p>
                 <div class="post_card_footer">
                   <span class="post_read_time"
-                    ><i class="fa-regular fa-clock"></i> — min read</span
+                    ><i class="fa-regular fa-clock"></i> 2 min read</span
                   >
                   <button class="post_read_link" onclick="openPost(3)">
                     Read post <i class="fa-solid fa-arrow-right"></i>
@@ -261,27 +248,32 @@
                 </div>
               </article>
 
+              <!-- POST 4 -->
               <article
                 class="blog_post_card"
-                data-category="javascript"
+                data-category="security"
                 data-postid="4"
               >
                 <div class="post_card_top">
                   <div class="post_card_tags">
-                    <span class="post_tag tag_javascript">JavaScript</span>
+                    <span class="post_tag tag_security">Security</span>
+                    <span class="post_tag tag_frontend">Frontend</span>
                   </div>
-                  <span class="post_card_date">Coming soon</span>
+                  <span class="post_card_date">March 2026</span>
                 </div>
                 <h2 class="post_card_title">
-                  JavaScript Article Title Placeholder
+                  I've Been Building Websites That Look Good — and Were Quietly
+                  Vulnerable
                 </h2>
                 <p class="post_card_excerpt">
-                  JS article excerpt placeholder. All card interactivity, filter
-                  logic, and animations are wired and ready for real content.
+                  Several projects in, I realised knowing how to build something
+                  without knowing how it breaks is only half the skill. So I
+                  started studying the OWASP Top 10 — and now I'm breaking my
+                  own projects on purpose.
                 </p>
                 <div class="post_card_footer">
                   <span class="post_read_time"
-                    ><i class="fa-regular fa-clock"></i> — min read</span
+                    ><i class="fa-regular fa-clock"></i> 5 min read</span
                   >
                   <button class="post_read_link" onclick="openPost(4)">
                     Read post <i class="fa-solid fa-arrow-right"></i>
@@ -289,57 +281,33 @@
                 </div>
               </article>
 
+              <!-- POST 5 -->
               <article
                 class="blog_post_card"
-                data-category="career"
+                data-category="tools"
                 data-postid="5"
               >
                 <div class="post_card_top">
                   <div class="post_card_tags">
+                    <span class="post_tag tag_tools">Tools</span>
                     <span class="post_tag tag_career">Career</span>
                   </div>
-                  <span class="post_card_date">Coming soon</span>
+                  <span class="post_card_date">April 2026</span>
                 </div>
                 <h2 class="post_card_title">
-                  Career / Journey Article Placeholder
+                  What My GitHub Contribution Graph Actually Says About Me
                 </h2>
                 <p class="post_card_excerpt">
-                  Career insight article excerpt placeholder. Share your
-                  journey, lessons learned, what you'd tell yourself earlier.
+                  208 contributions. 24 repositories. Some finished, some
+                  quietly abandoned. The commit history doesn't care about your
+                  intentions — only what you shipped. A brutally honest look at
+                  building in public.
                 </p>
                 <div class="post_card_footer">
                   <span class="post_read_time"
-                    ><i class="fa-regular fa-clock"></i> — min read</span
+                    ><i class="fa-regular fa-clock"></i> 3 min read</span
                   >
                   <button class="post_read_link" onclick="openPost(5)">
-                    Read post <i class="fa-solid fa-arrow-right"></i>
-                  </button>
-                </div>
-              </article>
-
-              <article
-                class="blog_post_card"
-                data-category="tools"
-                data-postid="6"
-              >
-                <div class="post_card_top">
-                  <div class="post_card_tags">
-                    <span class="post_tag tag_tools">Tools</span>
-                  </div>
-                  <span class="post_card_date">Coming soon</span>
-                </div>
-                <h2 class="post_card_title">
-                  Tools & Dev Setup Article Placeholder
-                </h2>
-                <p class="post_card_excerpt">
-                  Tools article excerpt placeholder. Dev setup, VS Code configs,
-                  or workflow improvements you've written about.
-                </p>
-                <div class="post_card_footer">
-                  <span class="post_read_time"
-                    ><i class="fa-regular fa-clock"></i> — min read</span
-                  >
-                  <button class="post_read_link" onclick="openPost(6)">
                     Read post <i class="fa-solid fa-arrow-right"></i>
                   </button>
                 </div>
@@ -368,22 +336,31 @@
               Get new articles<br />in your inbox
             </h2>
             <p class="blog_newsletter_sub">
-              No spam. Just new posts on frontend, Bitcoin and tech — when I
+              No spam. Just new posts on frontend, security and tech — when I
               publish.
             </p>
           </div>
           <div class="blog_newsletter_form_col">
-            <div class="blog_newsletter_form_wrapper">
+            <form
+              class="newsletter_form blog_newsletter_form_wrapper"
+              action=""
+            >
               <input
                 type="email"
+                name="user_email"
                 id="blog_email_input"
-                class="blog_newsletter_email_input"
+                class="blog_newsletter_email_input newsletter_email"
                 placeholder="your@email.com"
+                required
               />
-              <button class="blog_newsletter_btn" id="blog_subscribe_btn">
+              <button
+                class="shared_subscribe_button"
+                id="blog_newsletter_btn"
+                type="submit"
+              >
                 Subscribe <i class="fa-solid fa-paper-plane"></i>
               </button>
-            </div>
+            </form>
             <p class="blog_newsletter_msg" id="blog_newsletter_msg"></p>
           </div>
         </div>
@@ -396,6 +373,7 @@
       </footer>
     </div>
 
+    <!-- ── POST VIEW ── -->
     <div class="post_view" id="post_view">
       <div class="post_top_bar">
         <div class="post_top_bar_inner">
@@ -409,45 +387,10 @@
 
       <div class="post_layout">
         <div class="post_content_col">
-          <div class="post_date_line" id="post_view_date">Coming soon</div>
-          <h1 class="post_main_title" id="post_view_title">Article Title</h1>
+          <div class="post_date_line" id="post_view_date"></div>
+          <h1 class="post_main_title" id="post_view_title"></h1>
           <div class="post_divider"></div>
-          <div class="post_body" id="post_view_body">
-            <p>
-              This is where the full article content will go. Drop in the
-              article and this section will render it beautifully.
-            </p>
-            <p>
-              The layout is styled and ready — <strong>bold text</strong>,
-              <em>italic text</em>, inline <code>code</code>, and code blocks
-              all work.
-            </p>
-            <h2>A Section Heading</h2>
-            <p>
-              You can structure long articles with headings like this.
-              Sub-sections keep long reads scannable.
-            </p>
-            <div class="post_code_block">
-              <div class="post_code_block_header">
-                <span class="post_code_label">Code Example</span>
-                <button class="post_code_copy" onclick="copyCode(this)">
-                  Copy Code
-                </button>
-              </div>
-              <pre><code>const example = () => {
-  return "Replace with real code";
-};</code></pre>
-            </div>
-            <p>
-              Continue with more article content here. This placeholder shows
-              the structure you can build.
-            </p>
-            <h3>Takeaway</h3>
-            <p>
-              Wrap up key points here. Your real articles will fill this out
-              once you drop them in.
-            </p>
-          </div>
+          <div class="post_body" id="post_view_body"></div>
         </div>
 
         <div class="post_sidebar_col">
@@ -461,8 +404,12 @@
                 this.removeAttribute('src');
               "
             />
-            <div class="post_author_name">Debrah Kobby</div>
-            <div class="post_author_role">Frontend Engineer</div>
+            <div class="post_author_name" id="post_view_author_name">
+              Debrah Kobby
+            </div>
+            <div class="post_author_role" id="post_view_author_role">
+              Frontend Engineer
+            </div>
           </div>
 
           <div>
@@ -483,9 +430,21 @@
           </button>
           <div class="post_share_bar">
             <span class="post_share_label">Share</span>
-            <i class="fa-brands fa-x-twitter post_share_icon"></i>
-            <i class="fa-brands fa-facebook post_share_icon"></i>
-            <i class="fa-brands fa-linkedin post_share_icon"></i>
+            <a id="share_twitter" href="#" target="_blank" rel="noopener">
+              <i class="fa-brands fa-x-twitter post_share_icon"></i>
+            </a>
+            <a id="share_linkedin" href="#" target="_blank" rel="noopener">
+              <i class="fa-brands fa-linkedin post_share_icon"></i>
+            </a>
+            <a
+              id="view_on_linkedin"
+              href="#"
+              target="_blank"
+              rel="noopener"
+              class="post_view_on_linkedin_btn"
+            >
+              View on LinkedIn <i class="fa-brands fa-linkedin"></i>
+            </a>
           </div>
           <button
             class="post_footer_nav_btn"
@@ -497,6 +456,7 @@
         </div>
       </div>
     </div>
+
     <script src="js/blog.js"></script>
   </body>
 </html>

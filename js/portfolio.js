@@ -345,7 +345,7 @@ document
     e.preventDefault();
 
     const email = document.querySelector(".newsletter_email").value;
-    const btn = document.querySelector(".subscribe_buttn_on_NL");
+    const btn = document.querySelector(".shared_subscribe_button");
 
     btn.textContent = "Checking...";
     btn.disabled = true;
