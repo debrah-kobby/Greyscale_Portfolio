@@ -345,7 +345,6 @@ document.addEventListener("DOMContentLoaded", () => {
   attachStaggerDelay();
   initFilterListeners();
   initSearchListener();
-  initNewsletterForm();
 
   // Clicking anywhere on a card (outside the button) also opens the post
   blogPostCards.forEach((card) => {
@@ -537,19 +536,16 @@ function copyCode(btn) {
 }
 
 // ── Newsletter ──
-/* function initNewsletterForm() {
-  if (!blogSubscribeBtn || !blogEmailInput) return;
+document
+  .querySelector(".newsletter_form")
+  .addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  blogSubscribeBtn.addEventListener("click", async () => {
-    const email = blogEmailInput.value.trim();
+    const email = document.querySelector(".newsletter_email").value;
+    const btn = document.querySelector(".shared_subscribe_button");
 
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showNewsletterMsg("Please enter a valid email address.", "error");
-      return;
-    }
-
-    blogSubscribeBtn.disabled = true;
-    blogSubscribeBtn.textContent = "Subscribing...";
+    btn.textContent = "Checking...";
+    btn.disabled = true;
 
     try {
       const response = await fetch("/.netlify/functions/subscribe", {
@@ -557,40 +553,29 @@ function copyCode(btn) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
+
       const data = await response.json();
 
-      if (response.ok) {
-        showNewsletterMsg(
-          "You're in! Check your inbox for a confirmation.",
-          "success",
-        );
-        blogEmailInput.value = "";
-      } else if (response.status === 409) {
-        showNewsletterMsg("You're already subscribed!", "error");
+      if (data.status === "already_subscribed") {
+        btn.textContent = "Subscribe";
+        btn.disabled = false;
+        alert("This email is already subscribed to the newsletter!");
+        document.querySelector(".newsletter_email").value = "";
+        return;
+      }
+
+      if (data.status === "subscribed") {
+        btn.textContent = "Subscribed";
+        btn.disabled = false;
+        document.querySelector(".newsletter_email").value = "";
       } else {
-        showNewsletterMsg(
-          data.message || "Something went wrong. Try again.",
-          "error",
-        );
+        btn.textContent = "Subscribe";
+        btn.disabled = false;
+        alert("Something went wrong, please try again.");
       }
     } catch (err) {
-      showNewsletterMsg("Network error. Please try again.", "error");
-    } finally {
-      blogSubscribeBtn.disabled = false;
-      blogSubscribeBtn.innerHTML =
-        'Subscribe <i class="fa-solid fa-paper-plane"></i>';
+      btn.textContent = "Subscribe";
+      btn.disabled = false;
+      alert("Network error, please try again.");
     }
-  }); }*/
-
-/* function showNewsletterMsg(text, type) {
-  if (!blogNewsletterMsg) return;
-  blogNewsletterMsg.textContent = text;
-  blogNewsletterMsg.className = "blog_newsletter_msg";
-  if (type === "success") blogNewsletterMsg.classList.add("success_msg");
-  if (type === "error") blogNewsletterMsg.classList.add("error_msg");
-  setTimeout(() => {
-    blogNewsletterMsg.textContent = "";
-    blogNewsletterMsg.className = "blog_newsletter_msg";
-  }, 5000);
-}
- */
+  });
