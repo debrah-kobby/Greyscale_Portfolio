@@ -11,7 +11,7 @@ const postData = {
     readTime: "3 min read",
     tagLabel: "Career",
     tagClass: "tag_career",
-    images: ["assets/pcbehind2PCS.jpeg"],
+    images: ["assets/pcbehind2PCS.webp"],
     linkedinUrl:
       "https://www.linkedin.com/posts/princesam_frontenddevelopment-learninginpublic-techjourney-activity-7407470390718943232-KxSd",
     author: "Debrah Kobby",
@@ -21,7 +21,7 @@ const postData = {
 
       <p>I've been on LinkedIn for a while — learning quietly, connecting, and paying attention. I chose to listen before I spoke, to observe before I posted, so that when I eventually did, it would come from experience, not excitement.</p>
 
-      <img src="assets/pcbehind2PCS.jpeg" alt="Debrah Kobby at his desk" class="post_inline_img" />
+      <img src="assets/pcbehind2PCS.webp" alt="Debrah Kobby at his desk" class="post_inline_img" />
 
       <p>I didn't enter the tech space because it was trendy or because I had everything figured out. I wasn't "computer-savvy" in the way people often imagine. I started with curiosity and a lot of uncertainty.</p>
 
