@@ -460,7 +460,7 @@ function openPost(id) {
   if (authorImgEl) {
     // Use bainn image for post 3, default for others
     authorImgEl.src =
-      id === 3 ? "assets/bainseatedred.jpeg" : "assets/IMG_4646.jpg";
+      id === 3 ? "assets/bainseatedred.jpeg" : "assets/IMG_4646.webp";
     authorImgEl.alt = post.author;
   }
 

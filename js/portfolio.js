@@ -15,9 +15,8 @@ const ellipsisContent = document.querySelector(".elipsecontentonsmallscreens");
 const firstPage = document.getElementById("firstpage");
 const aboutMePage = document.getElementById("about_me");
 const navBar = document.getElementById("mainnavnav");
-const navBarHeight = navBar.offsetHeight;
+let navBarHeight = navBar.offsetHeight; // recalculated on resize below
 const aboutMePageHeight = aboutMePage.offsetHeight;
-console.log(aboutMePageHeight);
 const firstSocialIcons = document.querySelector(".social_on_first_page");
 const secondSocialIcons = document.querySelector(".modsforsocilaicons");
 const letsTalkButton = document.querySelector(".lets_talk_button_on_LT");
@@ -30,13 +29,17 @@ const skillsPage = document.getElementById("skills");
 const projectPage = document.getElementById("prrojectsection");
 const postsPage = document.querySelector("#recentPostsAriticle");
 
+// Keep navBarHeight accurate if the nav's height changes (e.g. wraps on small screens)
+window.addEventListener("resize", () => {
+  navBarHeight = navBar.offsetHeight;
+});
+
 window.addEventListener("scroll", () => {
   const firstPageRect = firstPage.getBoundingClientRect();
 
-  if (firstPageRect.bottom <= 609.6875) {
+  if (firstPageRect.bottom <= navBarHeight) {
     firstSocialIcons.classList.add("hideDisplay");
     secondSocialIcons.classList.add("showDisplay");
-    /* Fix: ensure pointer-events are restored on the fixed social icons */
     secondSocialIcons.style.pointerEvents = "all";
   } else {
     firstSocialIcons.classList.remove("hideDisplay");
@@ -56,22 +59,22 @@ window.addEventListener("scroll", () => {
     aboutonNav.removeAttribute("id");
     homeonNav.id = "home_link_on_nav";
   }
-  if (aboutMePageRect.top <= 125.34375) {
+  if (aboutMePageRect.top <= navBarHeight) {
     homeonNav.removeAttribute("id");
     aboutonNav.id = "home_link_on_nav";
     skillsonNav.removeAttribute("id");
   }
-  if (skillsPageRect.top <= 128.125) {
+  if (skillsPageRect.top <= navBarHeight) {
     aboutonNav.removeAttribute("id");
     skillsonNav.id = "home_link_on_nav";
   }
-  if (projectPageRect.top <= 128.453125) {
+  if (projectPageRect.top <= navBarHeight) {
     skillsonNav.removeAttribute("id");
     projectonNav.id = "home_link_on_nav";
   } else {
     projectonNav.removeAttribute("id");
   }
-  if (postsPageRect.top <= 128.453125) {
+  if (postsPageRect.top <= navBarHeight) {
     projectonNav.removeAttribute("id");
     skillsonNav.removeAttribute("id");
     if (postsonNav) postsonNav.id = "home_link_on_nav";
@@ -79,7 +82,6 @@ window.addEventListener("scroll", () => {
     if (postsonNav) postsonNav.removeAttribute("id");
   }
 });
-
 ellipsissmallScreen.addEventListener("click", () => {
   ellipsisContent.classList.toggle("active");
 });
@@ -94,7 +96,6 @@ document.addEventListener("click", (e) => {
 
 individualTabs.forEach((btn) => {
   btn.addEventListener("click", () => {
-    console.log(`${btn} clicked`);
     const contentTarget = btn.dataset.tab;
 
     individualTabs.forEach((t) => {
@@ -148,22 +149,22 @@ function closeModal() {
   document.body.style.height = "auto";
 }
 
+const texts = [
+  "a Web Developer",
+  "a UI/UX Designer",
+  "an Entrepreneur",
+  "a Videographer",
+];
+
+let currentIndex = 0;
+
 const variableTextLoad = () => {
-  setTimeout(() => {
-    variableText.textContent = "a Web Developer";
-  }, 0);
-  setTimeout(() => {
-    variableText.textContent = "a UI/UX Designer";
-  }, 6000);
-  setTimeout(() => {
-    variableText.textContent = "an Entrepreneur";
-  }, 12000);
-  setTimeout(() => {
-    variableText.textContent = "a Videographer";
-  }, 18000);
+  variableText.textContent = texts[currentIndex];
+  currentIndex = (currentIndex + 1) % texts.length;
+  setTimeout(variableTextLoad, 6000);
 };
+
 variableTextLoad();
-setInterval(variableTextLoad, 24000);
 
 /* ── PROJECT CARD FULL DISPLAY ── */
 const projectcardsNodelist = document.querySelectorAll(
@@ -234,10 +235,7 @@ projectcardsNodelist.forEach((project) => {
       </div>
       <div class="short_description_on_FPCD">${projectDataset.projectdescription}</div>
       <div class="youtube_and_live_icons_on_FPCD">
-        <a href="${projectDataset.projectyoutubelink}" target="_blank" class="youtube_on_FPCD">
-          <i class="fa-brands fa-youtube"></i>
-          <p>View Demo</p>
-        </a>
+        
         <a href="${projectDataset.projectlivelink}" target="_blank" class="live_on_FPCD">
           <i class="fa-solid fa-globe"></i>
           <p>View Live</p>
