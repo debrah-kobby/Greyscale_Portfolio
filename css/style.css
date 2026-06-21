@@ -540,7 +540,7 @@ html {
 }
 
 .fixedtext {
-  color: #999;
+  color: #555;
   font-family: "Space Mono", monospace;
 }
 
@@ -553,7 +553,18 @@ html {
   height: 100%;
   background-color: white;
   border-left: 2px solid blueviolet;
+  transform: translateX(0%);
   animation: typewriter 6s steps(15) infinite;
+}
+
+@keyframes typewriter {
+  40%,
+  60% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .variabletext {
@@ -564,26 +575,15 @@ html {
   font-family: "Space Mono", monospace;
 }
 
-@keyframes typewriter {
-  40%,
-  60% {
-    left: 100%;
-  }
-  100% {
-    left: 0;
-  }
-}
-
 .long_intro_text_on_first_page {
   font-family: "Poppins", sans-serif;
   font-size: 13px;
   line-height: 1.8;
-  color: #999;
+  color: #555;
   display: flex;
   max-width: 420px;
   margin-bottom: 32px;
 }
-
 .buttons_div_on_first_page {
   margin-top: 0;
   display: flex;
@@ -2532,7 +2532,7 @@ html {
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: #9ca3af;
+  color: #475569;
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -2555,10 +2555,11 @@ html {
   gap: 0.3rem;
 }
 
+/* CHANGE TO */
 .stickynoteauthor {
   font-family: "Poppins", sans-serif;
   font-size: 0.65rem;
-  color: #9ca3af;
+  color: #475569;
   display: block;
   margin-top: 0.5rem;
   letter-spacing: 0.04em;
