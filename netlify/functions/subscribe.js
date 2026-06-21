@@ -8,12 +8,21 @@ exports.handler = async (event) => {
     return { statusCode: 405, body: "Method Not Allowed" };
   }
 
-  const { email } = JSON.parse(event.body);
+  const { email: rawEmail } = JSON.parse(event.body);
+  const email = rawEmail?.trim();
 
   if (!email) {
     return {
       statusCode: 400,
       body: JSON.stringify({ error: "Email is required" }),
+    };
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ error: "Invalid email" }),
     };
   }
 
