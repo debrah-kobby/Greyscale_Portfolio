@@ -327,9 +327,9 @@ recentPosts.forEach((post) => {
     <div class="see_n_the_social_on_RP">
       <p>View on</p>
       <div class="icon_for_social_on_RP">
-        <a href="${post.link}" target="_blank">
-          <i class="devicon-linkedin-plain-wordmark colored"></i>
-        </a>
+        <a href="${post.link}" target="_blank" aria-label="View post on LinkedIn">
+  <i class="devicon-linkedin-plain-wordmark colored"></i>
+</a>
       </div>
     </div>
   `;
