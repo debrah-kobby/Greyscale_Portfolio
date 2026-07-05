@@ -383,5 +383,5 @@ document
   });
 
 function viewPosts() {
-  window.location.href = "blog.html";
+  window.location.href = "/blog";
 }

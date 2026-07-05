@@ -1,6 +1,17 @@
 [build]
 functions = "netlify/functions"
 
+[[redirects]]
+from = "/blog.html"
+to = "/blog"
+status = 301
+force = true
+
+[[redirects]]
+from = "/blog"
+to = "/blog.html"
+status = 200
+
 [[headers]]
 for = "/*"
 [headers.values]
