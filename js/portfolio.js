@@ -151,6 +151,7 @@ function closeModal() {
 
 const texts = [
   "a Web Developer",
+  "a Frontend Developer",
   "a UI/UX Designer",
   "an Entrepreneur",
   "a Videographer",
