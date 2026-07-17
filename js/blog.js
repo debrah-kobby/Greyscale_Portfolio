@@ -319,6 +319,112 @@ db.execute(query, [userInput]);</code></pre>
       <p>What do you use to keep yourself honest about how much you're actually creating vs. just planning to?</p>
     `,
   },
+  6: {
+    id: 6,
+    title: "An AI Tool Is Only As Good As Your Taste",
+    excerpt:
+      "A weekend at an AI bootcamp with Asera Technologies taught me the difference between prompt engineering, context engineering, and agentic workflows — and we built GradePath GH to prove it.",
+    category: "tools",
+    date: "July 2026",
+    readTime: "3 min read",
+    tagLabel: "Tools",
+    tagClass: "tag_tools",
+    images: [
+      "assets/aseramejednadolive1.webp",
+      "assets/aseragrouppicture1.webp",
+      "assets/aseragrouppic2.webp",
+    ],
+    linkedinUrl:
+      "https://www.linkedin.com/posts/princesam_ai-hackathon-buildinpublic-activity-7481022846765461524-boRQ",
+    author: "Debrah Kobby",
+    authorRole: "Frontend Engineer",
+    bodyHTML: `
+      <p>An AI tool is only as good as your taste. That was my biggest takeaway from this weekend's AI bootcamp with <a href="https://www.linkedin.com/company/asera-technologies/" target="_blank" rel="noopener">Asera Technologies</a> and <a href="https://www.linkedin.com/in/papa-yaw-adu-asare-226630212/" target="_blank" rel="noopener">Papa Yaw Adu-Asare</a>.</p>
+
+      <img src="assets/aseramejednadolive1.webp" alt="Asera Technologies AI bootcamp" class="post_inline_img" />
+
+      <h2>From Prompts to Agents</h2>
+      <p>We explored how AI has evolved from prompt engineering to context engineering, and now to agentic workflows — where AI doesn't just answer questions but takes action.</p>
+
+      <h2>Building GradePath GH</h2>
+      <p>We put those ideas into practice by building <strong>GradePath GH</strong>, a platform that helps Ghanaian students find universities and scholarships that match their grades and profile.</p>
+
+      <img src="assets/aseragrouppicture1.webp" alt="Bootcamp group picture" class="post_inline_img" />
+      <img src="assets/aseragrouppic2.webp" alt="Bootcamp group picture" class="post_inline_img" />
+
+      <p>You can check out what we built here: <a href="https://lnkd.in/d_88gSdr" target="_blank" rel="noopener">GradePath GH</a></p>
+
+      <h3>The Reminder I'm Keeping</h3>
+      <p>Let AI handle the routine work, but never outsource your thinking, judgment, and creativity.</p>
+    `,
+  },
+
+  7: {
+    id: 7,
+    title: "Bitcoin, Open Source, and Building Africa's Financial Rails",
+    excerpt:
+      "A session with Bitnob and BTrust on growing Bitcoin and open-source development across Africa — and why watching tech move from theory into real infrastructure never gets old.",
+    category: "career",
+    date: "July 2026",
+    readTime: "2 min read",
+    tagLabel: "Career",
+    tagClass: "tag_career",
+    images: ["assets/bitnobposterforlinkedin1.webp"],
+    linkedinUrl:
+      "https://www.linkedin.com/posts/princesam_tech-bitcoin-opensource-activity-7482121456504651777-zxh2",
+    author: "Debrah Kobby",
+    authorRole: "Frontend Engineer",
+    bodyHTML: `
+      <p>Spent part of today at a tech session hosted by Bitnob and BTrust, learning more about the work being done to grow Bitcoin and open-source development across Africa.</p>
+
+      <img src="assets/bitnobposterforlinkedin1.webp" alt="Bitnob BTrust session" class="post_inline_img" />
+
+      <h2>Infrastructure, Not Just Theory</h2>
+      <p>It was interesting to hear how companies are building infrastructure that makes digital financial services more accessible, while also creating opportunities for developers to contribute to the Bitcoin ecosystem.</p>
+
+      <h3>What Stuck With Me</h3>
+      <p>One thing I always appreciate about events like these is seeing how technology moves beyond theory into solving real-world problems. There's always something new to learn.</p>
+    `,
+  },
+
+  8: {
+    id: 8,
+    title: "What If Someone Believed in You Earlier?",
+    excerpt:
+      "A repost from Kwamena Ofori Bainn on visiting a school to talk STEM and career choices with students — and why Light Impact Network exists to be the support system we wish we'd had.",
+    category: "career",
+    date: "July 2026",
+    readTime: "2 min read",
+    tagLabel: "Career",
+    tagClass: "tag_career",
+    images: ["assets/lightimpactnet1.webp"],
+    linkedinUrl:
+      "https://www.linkedin.com/posts/bainn_lightimpactnetwork-youthempowerment-mentorship-ugcPost-7478723717720727552-6CNF",
+    author: "Kwamena Ofori Bainn",
+    authorRole: "Shared by Debrah Kobby",
+    bodyHTML: `
+      <p class="post_shared_notice"><i class="fa-solid fa-retweet"></i> This post was originally written by <strong>Kwamena Ofori Bainn</strong>. It resonated with me and I'm sharing it here.</p>
+
+      <img src="assets/lightimpactnet1.webp" alt="Light Impact Network school visit" class="post_inline_img" />
+
+      <p>Have you ever wondered what your life would look like if someone believed in you earlier?</p>
+
+      <p>About a month ago, a group of friends and I visited a school in our town, where we spent time talking to students about STEM, career choices, and the possibilities available to them.</p>
+
+      <h2>Why We Did It</h2>
+      <p>Growing up, many of us didn't have people around us who pushed us to dream bigger. We didn't always see examples that showed us what was possible. Career guidance was something many of us lacked — we had to figure things out ourselves, through trial and error.</p>
+
+      <p>But we believe something has to change. Every young person deserves someone who tells them: "You can do more." "Your background does not define your future." "Your dreams are worth pursuing."</p>
+
+      <h2>Light Impact Network</h2>
+      <p>That is why we created <strong>Light Impact Network</strong>, a movement dedicated to inspiring young people to dream bigger, believe in themselves, and pursue their goals. We want to become the kind of support system we wished we had while growing up — a source of encouragement, guidance, and a reminder that their future is bigger than their current circumstances.</p>
+
+      <h3>A Question Worth Sitting With</h3>
+      <p>Who was the person that inspired you to dream bigger? Or — what would you tell your younger self if you had the chance?</p>
+
+      <p>This is only the beginning. More on this journey soon.</p>
+    `,
+  },
 };
 
 // ── Element References ──
