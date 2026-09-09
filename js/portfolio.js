@@ -196,6 +196,11 @@ projectcardsNodelist.forEach((project) => {
       trello: "trello-plain",
       canva: "canva-original",
       notion: "notion-plain",
+      next: "nextjs-plain",
+      auth: "oauth-plain",
+      prisma: "prisma-original",
+      postgre: "postgresql-plain",
+      vercel: "vercel-original",
     };
 
     const stackIconsHTML = projectStackParsed

@@ -163,7 +163,7 @@ html {
   align-items: center;
   gap: 6px;
   font-family: "Space Mono", monospace;
-  font-size: 11px;
+  font-size: 12px;
   color: #555;
   border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 6px 14px;
@@ -495,6 +495,7 @@ html {
 }
 
 .actualnameonfirstpage {
+  display: block;
   font-family: "Space Mono", monospace;
   font-size: clamp(40px, 5.5vw, 72px);
   font-weight: 700;
@@ -506,8 +507,13 @@ html {
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
 }
-
+.hero_name_heading {
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
 .secondactualnameonfirstpage {
+  display: block;
   font-family: "Lavishly Yours", cursive;
   font-size: clamp(52px, 7vw, 96px);
   color: blueviolet;
@@ -596,7 +602,7 @@ html {
   background: blueviolet;
   color: white;
   font-family: "Space Mono", monospace;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.5px;
   border: none;
@@ -618,7 +624,7 @@ html {
   background: none;
   color: #555;
   font-family: "Space Mono", monospace;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.5px;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -813,7 +819,7 @@ html {
   padding-right: 2rem;
 }
 
-.chevronbeofrewebdevtext {
+/* .chevronbeofrewebdevtext {
   width: 38px;
   height: 38px;
   display: flex;
@@ -828,8 +834,15 @@ html {
   box-shadow: none;
   backdrop-filter: none;
   margin-right: 0.6rem;
+} */
+.chevronbeofrewebdevtext {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: blueviolet;
+  font-size: 1rem;
+  margin-right: 0.6rem;
 }
-
 .main-content-heading {
   display: flex;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -950,44 +963,16 @@ html {
   min-height: 420px;
 }
 
-.eachexpereincebox::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, blueviolet, #c084fc);
-  border-radius: 20px 20px 0 0;
-}
-
 .eachexpereincebox:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 40px rgba(138, 43, 226, 0.14);
 }
 
-.experiencecardnumberbadge {
-  position: absolute;
-  top: 1.2rem;
-  right: 1.4rem;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: rgba(138, 43, 226, 0.35);
-  font-family: "Poppins", sans-serif;
-}
-
 .imageforexperience {
-  width: 64px;
-  height: 64px;
-  border-radius: 14px;
-  background: #f3edfa;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   flex-shrink: 0;
-  border: 1px solid rgba(138, 43, 226, 0.12);
 }
 
 .imageforexperience img {
@@ -1167,33 +1152,15 @@ html {
 }
 
 /* icon + badge row */
-.serviceiconandnumberdiv {
+.serviceiconandheading {
   display: flex;
   align-items: center;
   gap: 0.6rem;
 }
-
-.iconwrapforeachservicebox {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: #f5f0ff;
-  border: 1px solid rgba(138, 43, 226, 0.14);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+.service_icon {
+  font-size: 1.3rem;
   color: blueviolet;
-  font-size: 0.9rem;
-}
-
-.servicecardnumberbadge {
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: rgba(138, 43, 226, 0.3);
-  font-family: "Poppins", sans-serif;
-  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .service_box_heading {
